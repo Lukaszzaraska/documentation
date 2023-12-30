@@ -101,7 +101,7 @@
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
-                                <a href="#CreateInterview" >CreateInterview</a>
+                                <a href="#createInterview" >createInterview</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
@@ -115,7 +115,7 @@
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
-                                <a href="#findAllBySchool" >findAllBySchool</a>
+                                <a href="#findAllByRegion" >findAllByRegion</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
@@ -123,6 +123,13 @@
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
                                 <a href="#findAllByUser" >findAllByUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
+                                <a href="#findById" >findById</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
@@ -180,7 +187,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>addUserToInterview(IdInterView: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, addUserInterViewDto: <a href="../classes/AddUserInterViewDto.html" target="_self">AddUserInterViewDto</a>)</code>
+                    <code>addUserToInterview(idInterView: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, addUserInterViewDto: <a href="../classes/AddUserInterViewDto.html" target="_self">AddUserInterViewDto</a>)</code>
                 </td>
             </tr>
 
@@ -194,8 +201,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="59"
-                            class="link-to-prism">src/models/interviews/interviews.controller.ts:59</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">src/models/interviews/interviews.controller.ts:79</a></div>
                 </td>
             </tr>
 
@@ -216,7 +223,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>IdInterView</td>
+                                    <td>idInterView</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -245,7 +252,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserInterViewDto.html" target="_self" >Promise&lt;ForbiddenException | GetUserInterViewDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -259,21 +266,21 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="CreateInterview"></a>
+                    <a name="createInterview"></a>
                     <span class="name">
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier">Async</span>
-                        <span ><b>CreateInterview</b></span>
-                        <a href="#CreateInterview"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>createInterview</b></span>
+                        <a href="#createInterview"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>CreateInterview(createInterViewDto: <a href="../classes/CreateInterViewDto.html" target="_self">CreateInterViewDto</a>)</code>
+                    <code>createInterview(createInterViewDto: <a href="../classes/CreateInterViewDto.html" target="_self">CreateInterViewDto</a>)</code>
                 </td>
             </tr>
 
@@ -287,8 +294,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="71"
-                            class="link-to-prism">src/models/interviews/interviews.controller.ts:71</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="91"
+                            class="link-to-prism">src/models/interviews/interviews.controller.ts:91</a></div>
                 </td>
             </tr>
 
@@ -354,7 +361,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>editInterview(IdInterView: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, editInterViewDto: <a href="../classes/EditInterViewDto.html" target="_self">EditInterViewDto</a>)</code>
+                    <code>editInterview(idInterView: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, editInterViewDto: <a href="../classes/EditInterViewDto.html" target="_self">EditInterViewDto</a>)</code>
                 </td>
             </tr>
 
@@ -368,8 +375,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="53"
-                            class="link-to-prism">src/models/interviews/interviews.controller.ts:53</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/models/interviews/interviews.controller.ts:73</a></div>
                 </td>
             </tr>
 
@@ -390,7 +397,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>IdInterView</td>
+                                    <td>idInterView</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -419,7 +426,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/EditInterViewDto.html" target="_self" >Promise&lt;EditInterViewDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -433,21 +440,21 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="findAllBySchool"></a>
+                    <a name="findAllByRegion"></a>
                     <span class="name">
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier">Async</span>
-                        <span ><b>findAllBySchool</b></span>
-                        <a href="#findAllBySchool"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>findAllByRegion</b></span>
+                        <a href="#findAllByRegion"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findAllBySchool(IdSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>findAllByRegion(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
                 </td>
             </tr>
 
@@ -455,14 +462,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Roles(Role.CA, Role.RD)<br />@UseFilters(new HttpExceptionFilter())<br />@Get(&#x27;findallbyschool/rd/:idschool&#x27;)<br /></code>
+                    <code>@Roles(Role.CA, Role.RD)<br />@UseFilters(new HttpExceptionFilter())<br />@Get(&#x27;findallbyregion&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/models/interviews/interviews.controller.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/models/interviews/interviews.controller.ts:34</a></div>
                 </td>
             </tr>
 
@@ -483,9 +490,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>IdSchool</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -500,7 +507,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetInterViewsDto.html" target="_self" >Promise&lt;GetInterViewsDto[]&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -528,7 +535,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findAllByUser(req: Request)</code>
+                    <code>findAllByUser(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
                 </td>
             </tr>
 
@@ -542,8 +549,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/models/interviews/interviews.controller.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/models/interviews/interviews.controller.ts:26</a></div>
                 </td>
             </tr>
 
@@ -564,9 +571,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -581,7 +588,100 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserInterViewDto.html" target="_self" >Promise&lt;GetUserInterViewDto[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findById"></a>
+                    <span class="name">
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier">Async</span>
+                        <span ><b>findById</b></span>
+                        <a href="#findById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findById(IdInterviews: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Roles(Role.CA, Role.RD)<br />@UseFilters(new HttpExceptionFilter())<br />@Get(&#x27;findbyid/:idinterview&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/models/interviews/interviews.controller.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>IdInterviews</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>reqInfo</td>
+                                    <td>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/GetFindByIdDto.html" target="_self" >Promise&lt;GetFindByIdDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -609,7 +709,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findByUser(IdUser: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>findByUser(idUser: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -617,14 +717,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Roles(Role.CA, Role.RD)<br />@UseFilters(new HttpExceptionFilter())<br />@Get(&#x27;findallbyuser/rd/:iduser&#x27;)<br /></code>
+                    <code>@Roles(Role.CA, Role.RD)<br />@UseFilters(new HttpExceptionFilter())<br />@Get(&#x27;findallbyuser/:iduser&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">src/models/interviews/interviews.controller.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/models/interviews/interviews.controller.ts:66</a></div>
                 </td>
             </tr>
 
@@ -645,7 +745,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>IdUser</td>
+                                    <td>idUser</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -662,7 +762,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserInterViewDto.html" target="_self" >Promise&lt;GetUserInterViewDto[]&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -690,7 +790,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findMyBySchool(IdSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, req: Request)</code>
+                    <code>findMyBySchool(idSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, self: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                 </td>
             </tr>
 
@@ -698,14 +798,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Roles(Role.CA, Role.USER)<br />@UseFilters(new HttpExceptionFilter())<br />@Get(&#x27;findallbyschool/:idschool&#x27;)<br /></code>
+                    <code>@Roles(Role.RD, Role.CA, Role.USER)<br />@UseFilters(new HttpExceptionFilter())<br />@Get(&#x27;findallbyschool/:idschool&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/models/interviews/interviews.controller.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/models/interviews/interviews.controller.ts:49</a></div>
                 </td>
             </tr>
 
@@ -726,7 +826,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>IdSchool</td>
+                                    <td>idSchool</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -738,9 +838,21 @@
 
                                 </tr>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>self</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
                                     </td>
 
                                     <td>
@@ -755,7 +867,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserInterViewDto.html" target="_self" >Promise&lt;GetUserInterViewDto[]&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -783,7 +895,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>removeUserToInterview(IdInterView: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, removeUserInterViewDto: <a href="../classes/RemoveUserInterViewDto.html" target="_self">RemoveUserInterViewDto</a>)</code>
+                    <code>removeUserToInterview(idInterView: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, removeUserInterViewDto: <a href="../classes/RemoveUserInterViewDto.html" target="_self">RemoveUserInterViewDto</a>)</code>
                 </td>
             </tr>
 
@@ -797,8 +909,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="65"
-                            class="link-to-prism">src/models/interviews/interviews.controller.ts:65</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/models/interviews/interviews.controller.ts:85</a></div>
                 </td>
             </tr>
 
@@ -819,7 +931,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>IdInterView</td>
+                                    <td>idInterView</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -848,7 +960,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/RemoveUserInterViewDto.html" target="_self" >Promise&lt;RemoveUserInterViewDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -862,8 +974,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">
-import { Body, Controller, Get, Param, Patch, Post, Req, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, ForbiddenException, Get, Param, Patch, Post, Query, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
 import { InterviewsService } from &#x27;./interviews.service&#x27;;
 import { RolesGuard } from &#x27;src/Auth/roles.guard&#x27;;
 import { Role } from &#x27;@prisma/client&#x27;;
@@ -871,9 +982,13 @@ import { Roles } from &#x27;src/Auth/decorators/roles.decorator&#x27;;
 import { CreateInterViewDto } from &#x27;./dto/createInterView.dto&#x27;;
 import { AddUserInterViewDto } from &#x27;./dto/addUserInterView.dto&#x27;;
 import { EditInterViewDto } from &#x27;./dto/editInterView.dto&#x27;;
-import { Request } from &#x27;express&#x27;;
 import { HttpExceptionFilter } from &#x27;src/common/validation/http-exception.filter&#x27;;
 import { RemoveUserInterViewDto } from &#x27;./dto/removeUserInterview.dto&#x27;;
+import { GetUserInterViewDto } from &#x27;./dto/getUserInterView.dto&#x27;;
+import { ReqInfo, ReqUserInfo } from &#x27;src/Auth/decorators/reqinfo.decorator&#x27;;
+import { GetInterViewsDto } from &#x27;./dto/GetInterViews.dto&#x27;;
+import { OptionsPipe } from &#x27;../fiszka/options.pipe&#x27;;
+import { GetFindByIdDto } from &#x27;./dto/getFindById.dto&#x27;;
 
 @UseGuards(RolesGuard)
 @Controller(&#x27;interviews&#x27;)
@@ -884,55 +999,72 @@ export class InterviewsController {
     @Roles(Role.CA, Role.USER, Role.RD)
     @UseFilters(new HttpExceptionFilter())
     @Get(&#x27;findallbyuser&#x27;)
-    async findAllByUser(@Req() req: Request) {
-        const UserId: string &#x3D; req[&#x27;user&#x27;].id
-        return this.interviewsService.findAllByUser(UserId)
+    async findAllByUser(@ReqInfo() reqInfo: ReqUserInfo): Promise&lt;GetUserInterViewDto[]&gt; {
+        return this.interviewsService.findAllByUser(reqInfo.id)
     }
 
-    @Roles(Role.CA, Role.USER)
+
+    @Roles(Role.CA, Role.RD)
+    @UseFilters(new HttpExceptionFilter())
+    @Get(&#x27;findallbyregion&#x27;)
+    async findAllByRegion(@ReqInfo() reqInfo: ReqUserInfo): Promise&lt;GetInterViewsDto[]&gt; {
+        return this.interviewsService.findAllByRegion(reqInfo.region)
+    }
+
+    @Roles(Role.CA, Role.RD)
+    @UseFilters(new HttpExceptionFilter())
+    @Get(&#x27;findbyid/:idinterview&#x27;)
+    async findById(@Param(&#x27;idinterview&#x27;) IdInterviews: string, @ReqInfo() reqInfo: ReqUserInfo): Promise&lt;GetFindByIdDto&gt; {
+        return this.interviewsService.findById(reqInfo.region, IdInterviews)
+    }
+
+
+    @Roles(Role.RD, Role.CA, Role.USER)
     @UseFilters(new HttpExceptionFilter())
     @Get(&#x27;findallbyschool/:idschool&#x27;)
-    async findMyBySchool(@Param(&#x27;idschool&#x27;) IdSchool: string, @Req() req: Request) {
-        const UserId: string &#x3D; req[&#x27;user&#x27;].id
-        return this.interviewsService.findMyBySchool(IdSchool, UserId)
+    async findMyBySchool(
+        @Param(&#x27;idschool&#x27;) idSchool: string,
+        @ReqInfo() reqInfo: ReqUserInfo,
+        @Query(&#x27;self&#x27;, OptionsPipe) self: number
+    ): Promise&lt;GetUserInterViewDto[]&gt; {
+        if (reqInfo.role.match(Role.RD)) {
+            return this.interviewsService.findAllBySchool(idSchool);
+        }
+        const userId &#x3D; reqInfo.id;
+        const result &#x3D; self ? this.interviewsService.findMyBySchool(idSchool, userId) : this.interviewsService.findAllBySchool(idSchool);
+        return result;
+
     }
 
     @Roles(Role.CA, Role.RD)
     @UseFilters(new HttpExceptionFilter())
-    @Get(&#x27;findallbyschool/rd/:idschool&#x27;)
-    async findAllBySchool(@Param(&#x27;idschool&#x27;) IdSchool: string) {
-        return this.interviewsService.findAllBySchool(IdSchool)
-    }
-
-    @Roles(Role.CA, Role.RD)
-    @UseFilters(new HttpExceptionFilter())
-    @Get(&#x27;findallbyuser/rd/:iduser&#x27;)
-    async findByUser(@Param(&#x27;iduser&#x27;) IdUser: string) {
-        return this.interviewsService.findByUser(IdUser)
+    @Get(&#x27;findallbyuser/:iduser&#x27;)
+    async findByUser(@Param(&#x27;iduser&#x27;) idUser: string): Promise&lt;GetUserInterViewDto[]&gt; {
+        return this.interviewsService.findByUser(idUser)
     }
 
     @Roles(Role.CA, Role.RD)
     @UseFilters(new HttpExceptionFilter())
     @Patch(&#x27;edit/:idinterview&#x27;)
-    async editInterview(@Param(&#x27;idinterview&#x27;) IdInterView: string, @Body() editInterViewDto: EditInterViewDto) {
-        return this.interviewsService.editInterview(IdInterView, editInterViewDto)
+    async editInterview(@Param(&#x27;idinterview&#x27;) idInterView: string, @Body() editInterViewDto: EditInterViewDto): Promise&lt;EditInterViewDto&gt; {
+        return this.interviewsService.editInterview(idInterView, editInterViewDto)
     }
     @Roles(Role.CA, Role.RD)
     @UseFilters(new HttpExceptionFilter())
     @Patch(&#x27;adduser/:idinterview&#x27;)
-    async addUserToInterview(@Param(&#x27;idinterview&#x27;) IdInterView: string, @Body() addUserInterViewDto: AddUserInterViewDto) {
-        return this.interviewsService.addUserToInterview(IdInterView, addUserInterViewDto)
+    async addUserToInterview(@Param(&#x27;idinterview&#x27;) idInterView: string, @Body() addUserInterViewDto: AddUserInterViewDto): Promise&lt;ForbiddenException|GetUserInterViewDto &gt; {
+        return this.interviewsService.addUserToInterview(idInterView, addUserInterViewDto)
     }
     @Roles(Role.CA, Role.RD)
     @UseFilters(new HttpExceptionFilter())
     @Patch(&#x27;removeuser/:idinterview&#x27;)
-    async removeUserToInterview(@Param(&#x27;idinterview&#x27;) IdInterView: string, @Body() removeUserInterViewDto: RemoveUserInterViewDto) {
-        return this.interviewsService.removeUserFromInterview(IdInterView, removeUserInterViewDto)
+    async removeUserToInterview(@Param(&#x27;idinterview&#x27;) idInterView: string, @Body() removeUserInterViewDto: RemoveUserInterViewDto): Promise&lt;RemoveUserInterViewDto&gt; {
+        return this.interviewsService.removeUserFromInterview(idInterView, removeUserInterViewDto)
     }
     @Roles(Role.CA, Role.RD)
     @UseFilters(new HttpExceptionFilter())
     @Post(&#x27;create&#x27;)
-    async CreateInterview(@Body() createInterViewDto: CreateInterViewDto) {
+    async createInterview(@Body() createInterViewDto: CreateInterViewDto) {
         return this.interviewsService.CreateInterview(createInterViewDto)
     }
 

@@ -108,14 +108,14 @@
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
-                                <a href="#getByIdForMgtmt" >getByIdForMgtmt</a>
+                                <a href="#getById" >getById</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
-                                <a href="#getByIdForRD" >getByIdForRD</a>
+                                <a href="#getByIdGroup" >getByIdGroup</a>
                             </li>
                         </ul>
                     </td>
@@ -152,7 +152,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>create(req: Request, IdSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, body: <a href="../classes/CreateGroupDto.html" target="_self">CreateGroupDto</a>)</code>
+                    <code>create(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, IdSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, body: <a href="../classes/CreateGroupDto.html" target="_self">CreateGroupDto</a>)</code>
                 </td>
             </tr>
 
@@ -166,8 +166,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/models/group/group.controller.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/models/group/group.controller.ts:41</a></div>
                 </td>
             </tr>
 
@@ -188,9 +188,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -229,7 +229,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/CreateGroupDto.html" target="_self" >Promise&lt;CreateGroupDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -257,7 +257,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>edit(req: Request, IdSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, IdGroup: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, body: <a href="../classes/EditGroupDto.html" target="_self">EditGroupDto</a>)</code>
+                    <code>edit(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, IdSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, IdGroup: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, body: <a href="../classes/EditGroupDto.html" target="_self">EditGroupDto</a>)</code>
                 </td>
             </tr>
 
@@ -271,8 +271,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">src/models/group/group.controller.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/models/group/group.controller.ts:47</a></div>
                 </td>
             </tr>
 
@@ -293,9 +293,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -360,21 +360,21 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getByIdForMgtmt"></a>
+                    <a name="getById"></a>
                     <span class="name">
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier">Async</span>
-                        <span ><b>getByIdForMgtmt</b></span>
-                        <a href="#getByIdForMgtmt"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>getById</b></span>
+                        <a href="#getById"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getByIdForMgtmt(IdSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>getById(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, IdSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -382,14 +382,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Roles(Role.MGTMT)<br />@UseFilters(new HttpExceptionFilter())<br />@Get(&#x27;getgroups/mgtmt/:idschool&#x27;)<br /></code>
+                    <code>@Roles(Role.CA, Role.RD, Role.MGTMT)<br />@UseFilters(new HttpExceptionFilter())<br />@Get(&#x27;groups/:idschool&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/models/group/group.controller.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="21"
+                            class="link-to-prism">src/models/group/group.controller.ts:21</a></div>
                 </td>
             </tr>
 
@@ -409,6 +409,18 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>reqInfo</td>
+                                    <td>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
                                 <tr>
                                     <td>IdSchool</td>
                                     <td>
@@ -441,21 +453,21 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getByIdForRD"></a>
+                    <a name="getByIdGroup"></a>
                     <span class="name">
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier">Async</span>
-                        <span ><b>getByIdForRD</b></span>
-                        <a href="#getByIdForRD"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>getByIdGroup</b></span>
+                        <a href="#getByIdGroup"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getByIdForRD(req: Request, IdSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>getByIdGroup(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, idgroup: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -463,14 +475,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Roles(Role.CA, Role.RD)<br />@UseFilters(new HttpExceptionFilter())<br />@Get(&#x27;getgroups/rd/:idschool&#x27;)<br /></code>
+                    <code>@Roles(Role.CA, Role.RD, Role.MGTMT)<br />@UseFilters(new HttpExceptionFilter())<br />@Get(&#x27;group/:idgroup&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/models/group/group.controller.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/models/group/group.controller.ts:31</a></div>
                 </td>
             </tr>
 
@@ -491,9 +503,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -503,7 +515,7 @@
 
                                 </tr>
                                 <tr>
-                                    <td>IdSchool</td>
+                                    <td>idgroup</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -520,7 +532,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/GetGroupDto.html" target="_self" >Promise&lt;GetGroupDto[]&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/GetGroupDto.html" target="_self" >Promise&lt;GetGroupDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -534,8 +546,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Request } from &#x27;express&#x27;;
-import { Controller, Get, Param, Patch, Post, Req, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, Get, Param, Patch, Post, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
 import { RolesGuard } from &#x27;src/Auth/roles.guard&#x27;;
 import { GroupService } from &#x27;./group.service&#x27;;
 import { Role } from &#x27;@prisma/client&#x27;;
@@ -544,6 +555,7 @@ import { HttpExceptionFilter } from &#x27;src/common/validation/http-exception.f
 import { GetGroupDto } from &#x27;./dto/getGroup.dto&#x27;;
 import { CreateGroupDto } from &#x27;./dto/createGroup.dto&#x27;;
 import { EditGroupDto } from &#x27;./dto/editGroup.dto&#x27;;
+import { ReqInfo, ReqUserInfo } from &#x27;src/Auth/decorators/reqinfo.decorator&#x27;;
 
 
 @UseGuards(RolesGuard)
@@ -551,33 +563,37 @@ import { EditGroupDto } from &#x27;./dto/editGroup.dto&#x27;;
 export class GroupController {
     constructor(private groupService: GroupService) { }
 
-    @Roles(Role.CA, Role.RD)
+    @Roles(Role.CA, Role.RD, Role.MGTMT)
     @UseFilters(new HttpExceptionFilter())
-    @Get(&#x27;getgroups/rd/:idschool&#x27;)
-    async getByIdForRD(@Req() req: Request, @Param(&#x27;idschool&#x27;) IdSchool: string): Promise&lt;GetGroupDto[]&gt; {
-        const region: string &#x3D; req[&#x27;user&#x27;].region;
-        return this.groupService.getByIdForRD(IdSchool, region)
+    @Get(&#x27;groups/:idschool&#x27;)
+    async getById(@ReqInfo() reqInfo: ReqUserInfo, @Param(&#x27;idschool&#x27;) IdSchool: string): Promise&lt;GetGroupDto[]&gt; {
+        if (reqInfo.role.match(Role.MGTMT)) {
+            return this.groupService.getByIdForMGTMT(IdSchool)
+        } else {
+            return this.groupService.getByIdForRD(IdSchool, reqInfo.region)
+        }
     }
-
-    @Roles(Role.MGTMT)
+    @Roles(Role.CA, Role.RD, Role.MGTMT)
     @UseFilters(new HttpExceptionFilter())
-    @Get(&#x27;getgroups/mgtmt/:idschool&#x27;)
-    async getByIdForMgtmt(@Param(&#x27;idschool&#x27;) IdSchool: string): Promise&lt;GetGroupDto[]&gt; {
-        return this.groupService.getByIdForMGTMT(IdSchool)
+    @Get(&#x27;group/:idgroup&#x27;)
+    async getByIdGroup(@ReqInfo() reqInfo: ReqUserInfo, @Param(&#x27;idgroup&#x27;) idgroup: string): Promise&lt;GetGroupDto&gt; {
+        if (reqInfo.role.match(Role.MGTMT)) {
+            return this.groupService.getByIdGroupForMGTMT(idgroup)
+        } else {
+            return this.groupService.getByIdGroupForRD(idgroup, reqInfo.region)
+        }
     }
     @Roles(Role.CA, Role.RD)
     @UseFilters(new HttpExceptionFilter())
     @Post(&#x27;create/:idschool&#x27;)
-    async create(@Req() req: Request, @Param(&#x27;idschool&#x27;) IdSchool: string, body: CreateGroupDto) {
-        const region: string &#x3D; req[&#x27;user&#x27;].region;
-        return this.groupService.create(IdSchool, region, body)
+    async create(@ReqInfo() reqInfo: ReqUserInfo, @Param(&#x27;idschool&#x27;) IdSchool: string, @Body() body: CreateGroupDto): Promise&lt;CreateGroupDto&gt; {
+        return this.groupService.create(IdSchool, reqInfo.region, body)
     }
     @Roles(Role.CA, Role.RD)
     @UseFilters(new HttpExceptionFilter())
     @Patch(&#x27;edit/:idschool/:idgroup&#x27;)
-    async edit(@Req() req: Request, @Param(&#x27;idschool&#x27;) IdSchool: string, @Param(&#x27;idgroup&#x27;) IdGroup: string, body: EditGroupDto) {
-        const region: string &#x3D; req[&#x27;user&#x27;].region;
-        return this.groupService.edit(IdSchool, IdGroup, region, body)
+    async edit(@ReqInfo() reqInfo: ReqUserInfo, @Param(&#x27;idschool&#x27;) IdSchool: string, @Param(&#x27;idgroup&#x27;) IdGroup: string, @Body() body: EditGroupDto) {
+        return this.groupService.edit(IdSchool, IdGroup, reqInfo.region, body)
     }
     //dodawanie grup do danej szkoły dla rd
     //wyświetlanie grup wszystkich dla szkoły Rd  (region)

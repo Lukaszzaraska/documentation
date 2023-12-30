@@ -37,7 +37,7 @@
 
 <ol class="breadcrumb">
   <li class="breadcrumb-item">Controllers</li>
-  <li class="breadcrumb-item" >SchoolController</li>
+  <li class="breadcrumb-item" >ScheduleDaysController</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,14 +61,14 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/models/school/school.controller.ts</code>
+            <code>src/models/scheduleDays/scheduledays.controller.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Prefix</h3>
             </p>
             <p class="comment">
-                <code>school</code>
+                <code>scheduleday</code>
             </p>
 
 
@@ -94,14 +94,14 @@
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
-                                <a href="#createSchool" >createSchool</a>
+                                <a href="#create" >create</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
-                                <a href="#editSchool" >editSchool</a>
+                                <a href="#edit" >edit</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
@@ -109,13 +109,6 @@
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
                                 <a href="#findAll" >findAll</a>
-                            </li>
-                            <li>
-                                    <span class="modifier"></span>
-                                    <span class="modifier"></span>
-                                    <span class="modifier"></span>
-                                    <span class="modifier">Async</span>
-                                <a href="#findById" >findById</a>
                             </li>
                         </ul>
                     </td>
@@ -138,21 +131,21 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="createSchool"></a>
+                    <a name="create"></a>
                     <span class="name">
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier">Async</span>
-                        <span ><b>createSchool</b></span>
-                        <a href="#createSchool"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>create</b></span>
+                        <a href="#create"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>createSchool(body: <a href="../classes/CreateSchoolDto.html" target="_self">CreateSchoolDto</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
+                    <code>create(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, IdSchedule: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, data: <a href="../classes/CreateScheduleDaysDto.html" target="_self">CreateScheduleDaysDto[]</a>)</code>
                 </td>
             </tr>
 
@@ -160,14 +153,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA)<br />@Post(&#x27;create&#x27;)<br /></code>
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA)<br />@Post(&#x27;create/:IdSchedule&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="53"
-                            class="link-to-prism">src/models/school/school.controller.ts:53</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/models/scheduleDays/scheduledays.controller.ts:26</a></div>
                 </td>
             </tr>
 
@@ -188,9 +181,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>body</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                                <code><a href="../classes/CreateSchoolDto.html" target="_self" >CreateSchoolDto</a></code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -200,9 +193,21 @@
 
                                 </tr>
                                 <tr>
-                                    <td>reqInfo</td>
+                                    <td>IdSchedule</td>
                                     <td>
-                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="../classes/CreateScheduleDaysDto.html" target="_self" >CreateScheduleDaysDto[]</a></code>
                                     </td>
 
                                     <td>
@@ -217,7 +222,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/CreateSchoolDto.html" target="_self" >Promise&lt;CreateSchoolDto&gt;</a></code>
+                        <b>Returns : </b>    <code>unknown</code>
 
                     </div>
                     <div class="io-description">
@@ -231,21 +236,21 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="editSchool"></a>
+                    <a name="edit"></a>
                     <span class="name">
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier">Async</span>
-                        <span ><b>editSchool</b></span>
-                        <a href="#editSchool"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>edit</b></span>
+                        <a href="#edit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>editSchool(SchoolId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, editSchoolDto: <a href="../classes/EditSchoolDto.html" target="_self">EditSchoolDto</a>)</code>
+                    <code>edit(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, IdSchedule: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, data: <a href="../classes/EditScheduleDaysDto.html" target="_self">EditScheduleDaysDto[]</a>)</code>
                 </td>
             </tr>
 
@@ -253,14 +258,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA)<br />@Patch(&#x27;edit/:id&#x27;)<br /></code>
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA)<br />@Patch(&#x27;edit/:IdSchedule&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">src/models/school/school.controller.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/models/scheduleDays/scheduledays.controller.ts:33</a></div>
                 </td>
             </tr>
 
@@ -281,18 +286,6 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>SchoolId</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
                                     <td>reqInfo</td>
                                     <td>
                                                 <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
@@ -305,9 +298,21 @@
 
                                 </tr>
                                 <tr>
-                                    <td>editSchoolDto</td>
+                                    <td>IdSchedule</td>
                                     <td>
-                                                <code><a href="../classes/EditSchoolDto.html" target="_self" >EditSchoolDto</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="../classes/EditScheduleDaysDto.html" target="_self" >EditScheduleDaysDto[]</a></code>
                                     </td>
 
                                     <td>
@@ -322,7 +327,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/EditSchoolDto.html" target="_self" >Promise&lt;EditSchoolDto&gt;</a></code>
+                        <b>Returns : </b>    <code>unknown</code>
 
                     </div>
                     <div class="io-description">
@@ -350,7 +355,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findAll(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
+                    <code>findAll(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, IdSchedule: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -358,14 +363,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA, Role.MGTMT)<br />@Get(&#x27;findall&#x27;)<br /></code>
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA)<br />@Post(&#x27;findall/:IdSchedule&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/models/school/school.controller.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/models/scheduleDays/scheduledays.controller.ts:19</a></div>
                 </td>
             </tr>
 
@@ -397,77 +402,8 @@
 
 
                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/GetSchoolDto.html" target="_self" >Promise&lt;GetSchoolDto[]&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="findById"></a>
-                    <span class="name">
-                        <span class="modifier"></span>
-                        <span class="modifier"></span>
-                        <span class="modifier"></span>
-                        <span class="modifier">Async</span>
-                        <span ><b>findById</b></span>
-                        <a href="#findById"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findById(SchoolId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA)<br />@Get(&#x27;findbyid/:id&#x27;)<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/models/school/school.controller.ts:34</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
                                 <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>SchoolId</td>
+                                    <td>IdSchedule</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -478,25 +414,13 @@
 
 
                                 </tr>
-                                <tr>
-                                    <td>reqInfo</td>
-                                    <td>
-                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
                             </tbody>
                         </table>
                     </div>
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/GetSchoolDto.html" target="_self" >Promise&lt;GetSchoolDto&gt;</a></code>
+                        <b>Returns : </b>    <code>unknown</code>
 
                     </div>
                     <div class="io-description">
@@ -510,71 +434,43 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, Get, Param, Patch, Post, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, Param, Patch, Post, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
 import { RolesGuard } from &#x27;src/Auth/roles.guard&#x27;;
-import { SchoolService } from &#x27;./school.service&#x27;;
 import { Role } from &#x27;@prisma/client&#x27;;
 import { Roles } from &#x27;src/Auth/decorators/roles.decorator&#x27;;
 import { HttpExceptionFilter } from &#x27;src/common/validation/http-exception.filter&#x27;;
-import { EditSchoolDto } from &#x27;./dto/editSchool.dto&#x27;;
-import { CreateSchoolDto } from &#x27;./dto/createSchool.dto&#x27;;
-import { GetSchoolDto } from &#x27;./dto/getSchool.dto&#x27;;
-import { DtoValidationPipe } from &#x27;./dtoValidation.pipe&#x27;;
 import { ReqInfo, ReqUserInfo } from &#x27;src/Auth/decorators/reqinfo.decorator&#x27;;
+import { CreateScheduleDaysDto } from &#x27;./dto/createSheduleDays.dto&#x27;;
+import { EditScheduleDaysDto } from &#x27;./dto/editSheduleDays.dto&#x27;;
+import { ScheduleDaysService } from &#x27;./scheduledays.service&#x27;;
 
-
-@Controller(&#x27;school&#x27;)
+@Controller(&#x27;scheduleday&#x27;)
 @UseGuards(RolesGuard)
-export class SchoolController {
-    constructor(private schoolService: SchoolService) { }
+export class ScheduleDaysController {
+    constructor(private scheduleDaysService: ScheduleDaysService) { }
 
     @UseFilters(new HttpExceptionFilter())
-    @Roles(Role.RD, Role.CA, Role.MGTMT)
-    @Get(&#x27;findall&#x27;)
-    async findAll(@ReqInfo() reqInfo: ReqUserInfo): Promise&lt;GetSchoolDto[]&gt; {
-
-        if (reqInfo.role.match(Role.MGTMT)) {
-            return this.schoolService.findAllForMGTM();
-        } else {
-            return this.schoolService.findAll(reqInfo.region);
-        }
+    @Roles(Role.RD, Role.CA)
+    @Post(&#x27;findall/:IdSchedule&#x27;)
+    async findAll(@ReqInfo() reqInfo: ReqUserInfo, @Param(&#x27;IdSchedule&#x27;) IdSchedule: string) {
+        return this.scheduleDaysService.findAll(IdSchedule, reqInfo.region)
     }
 
     @UseFilters(new HttpExceptionFilter())
     @Roles(Role.RD, Role.CA)
-    @Get(&#x27;findbyid/:id&#x27;)
-    async findById(@Param(&#x27;id&#x27;) SchoolId: string, @ReqInfo() reqInfo: ReqUserInfo): Promise&lt;GetSchoolDto&gt; {
-        if (reqInfo.role.match(Role.MGTMT)) {
-            return this.schoolService.findByIdForMGTM(SchoolId);
-        } else {
-            return this.schoolService.findById(SchoolId, reqInfo.region);
-        }
-
+    @Post(&#x27;create/:IdSchedule&#x27;)
+    async create(@ReqInfo() reqInfo: ReqUserInfo, @Param(&#x27;IdSchedule&#x27;) IdSchedule: string, @Body() data: CreateScheduleDaysDto[]) {
+        return this.scheduleDaysService.create(IdSchedule, reqInfo.region, data)
     }
 
     @UseFilters(new HttpExceptionFilter())
     @Roles(Role.RD, Role.CA)
-    @Patch(&#x27;edit/:id&#x27;)
-    async editSchool(@Param(&#x27;id&#x27;) SchoolId: string, @ReqInfo() reqInfo: ReqUserInfo, @Body(DtoValidationPipe) editSchoolDto: EditSchoolDto): Promise&lt;EditSchoolDto&gt; {
-        return this.schoolService.editSchool(SchoolId, reqInfo.region, editSchoolDto );
+    @Patch(&#x27;edit/:IdSchedule&#x27;)
+    async edit(@ReqInfo() reqInfo: ReqUserInfo, @Param(&#x27;IdSchedule&#x27;) IdSchedule: string, @Body() data: EditScheduleDaysDto[]) {
+        return this.scheduleDaysService.edit(IdSchedule, reqInfo.region, data)
     }
 
-    @UseFilters(new HttpExceptionFilter())
-    @Roles(Role.RD, Role.CA)
-    @Post(&#x27;create&#x27;)
-    async createSchool(@Body(DtoValidationPipe) body: CreateSchoolDto, @ReqInfo() reqInfo: ReqUserInfo): Promise&lt;CreateSchoolDto&gt; {
-        return this.schoolService.createSchool(reqInfo.region, body);
-    }
-    // Lista wszystkich placówek z danego regionu dla użytkownika z rolą RD lub CA
-    // Konkretna placówka po podaniu jej id (tylko z danego regionu) dla użytkownika z rolą RD lub CA
-    // Lista wszystkich placówek dla użytkownika z rolą MGTMT
-    // Konkretna placówka po podaniu jej id dla użytkownika z rolą MGTMT
-    // edycja placówki dla rd i ca (tylko z danego regionu)
-    // Tworzenie nowej placówki dla rd i ca (tylko z danego regionu)
 }
-
-
-
 </code></pre>
     </div>
 </div>
@@ -620,7 +516,7 @@ export class SchoolController {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
-            var COMPODOC_CURRENT_PAGE_URL = 'SchoolController.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ScheduleDaysController.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

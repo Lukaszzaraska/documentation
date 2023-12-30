@@ -108,6 +108,27 @@
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
+                                <a href="#deleteFiszka" >deleteFiszka</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteFiszkaByUser" >deleteFiszkaByUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteFiszkaFromGroup" >deleteFiszkaFromGroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
                                 <a href="#editFiszkaRd" >editFiszkaRd</a>
                             </li>
                             <li>
@@ -129,14 +150,14 @@
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
-                                <a href="#findAllByMe" >findAllByMe</a>
+                                <a href="#findAllForGroup" >findAllForGroup</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
-                                <a href="#findAllByUser" >findAllByUser</a>
+                                <a href="#findAllForRegion" >findAllForRegion</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
@@ -180,7 +201,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>addFiszki(idInterview: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, req: Request, body: <a href="../classes/CreateFiszkaDto.html" target="_self">CreateFiszkaDto[]</a>)</code>
+                    <code>addFiszki(idInterview: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, body: <a href="../classes/CreateFiszkaDto.html" target="_self">CreateFiszkaDto</a>)</code>
                 </td>
             </tr>
 
@@ -194,8 +215,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="65"
-                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:65</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:70</a></div>
                 </td>
             </tr>
 
@@ -228,9 +249,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -242,7 +263,7 @@
                                 <tr>
                                     <td>body</td>
                                     <td>
-                                                <code><a href="../classes/CreateFiszkaDto.html" target="_self" >CreateFiszkaDto[]</a></code>
+                                                <code><a href="../classes/CreateFiszkaDto.html" target="_self" >CreateFiszkaDto</a></code>
                                     </td>
 
                                     <td>
@@ -285,7 +306,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>addGroup(IdGroup: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, body: <a href="../classes/AddgroupDto.html" target="_self">AddgroupDto</a>)</code>
+                    <code>addGroup(idGroup: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, body: <a href="../classes/AddgroupDto.html" target="_self">AddgroupDto</a>)</code>
                 </td>
             </tr>
 
@@ -299,8 +320,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="74"
-                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:74</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:90</a></div>
                 </td>
             </tr>
 
@@ -321,7 +342,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>IdGroup</td>
+                                    <td>idGroup</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -364,21 +385,21 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="editFiszkaRd"></a>
+                    <a name="deleteFiszka"></a>
                     <span class="name">
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier">Async</span>
-                        <span ><b>editFiszkaRd</b></span>
-                        <a href="#editFiszkaRd"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>deleteFiszka</b></span>
+                        <a href="#deleteFiszka"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>editFiszkaRd(idFiszka: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, req: Request, body: <a href="../classes/EditFiszkaDto.html" target="_self">EditFiszkaDto</a>)</code>
+                    <code>deleteFiszka(idFiszka: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -386,14 +407,95 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.MGTMT, Role.CA, Role.RD)<br />@Patch(&#x27;editfiszka/:idFiszka&#x27;)<br /></code>
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.MGTMT, Role.CA, Role.RD)<br />@Delete(&#x27;deletefiszka/:idFiszki&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="51"
-                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:51</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:77</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idFiszka</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteFiszkaByUser"></a>
+                    <span class="name">
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier">Async</span>
+                        <span ><b>deleteFiszkaByUser</b></span>
+                        <a href="#deleteFiszkaByUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteFiszkaByUser(idFiszka: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.USER)<br />@Delete(&#x27;deletefiszka/:idFiszki&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:83</a></div>
                 </td>
             </tr>
 
@@ -426,21 +528,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>body</td>
-                                    <td>
-                                                <code><a href="../classes/EditFiszkaDto.html" target="_self" >EditFiszkaDto</a></code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -469,21 +559,21 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="editFiszkaUser"></a>
+                    <a name="deleteFiszkaFromGroup"></a>
                     <span class="name">
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier">Async</span>
-                        <span ><b>editFiszkaUser</b></span>
-                        <a href="#editFiszkaUser"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>deleteFiszkaFromGroup</b></span>
+                        <a href="#deleteFiszkaFromGroup"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>editFiszkaUser(idFiszka: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, idInterview: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, req: Request, body: <a href="../classes/EditFiszkaDto.html" target="_self">EditFiszkaDto</a>)</code>
+                    <code>deleteFiszkaFromGroup(idGroup: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, idFiszki: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -491,7 +581,100 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.USER)<br />@Patch(&#x27;editfiszka/:idFiszka/:idInterview&#x27;)<br /></code>
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.CA, Role.RD)<br />@Delete(&#x27;deletefiszka/:idfiszki/fromgroup/:idgroup&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idGroup</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>idFiszki</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editFiszkaRd"></a>
+                    <span class="name">
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier">Async</span>
+                        <span ><b>editFiszkaRd</b></span>
+                        <a href="#editFiszkaRd"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>editFiszkaRd(idFiszka: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, body: <a href="../classes/EditFiszkaDto.html" target="_self">EditFiszkaDto</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.MGTMT, Role.CA, Role.RD)<br />@Patch(&#x27;editfiszka/:idFiszka&#x27;)<br /></code>
                 </td>
             </tr>
 
@@ -531,21 +714,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>idInterview</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>req</td>
-                                    <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -572,7 +743,124 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/EditFiszkaDto.html" target="_self" >Promise&lt;EditFiszkaDto | ForbiddenException&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editFiszkaUser"></a>
+                    <span class="name">
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier">Async</span>
+                        <span ><b>editFiszkaUser</b></span>
+                        <a href="#editFiszkaUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>editFiszkaUser(idFiszka: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, idInterview: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, body: <a href="../classes/EditFiszkaDto.html" target="_self">EditFiszkaDto</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.USER)<br />@Patch(&#x27;editfiszka/:idFiszka/:idInterview&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idFiszka</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>idInterview</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>reqInfo</td>
+                                    <td>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>body</td>
+                                    <td>
+                                                <code><a href="../classes/EditFiszkaDto.html" target="_self" >EditFiszkaDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/EditFiszkaDto.html" target="_self" >Promise&lt;EditFiszkaDto | ForbiddenException&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -600,7 +888,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findAllByInterview(idInterview: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, UserID: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>findAllByInterview(idInterview: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, self: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
                 </td>
             </tr>
 
@@ -608,14 +896,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.MGTMT, Role.RD, Role.CA)<br />@Get(&#x27;findall/:idInterview/:idEmployee&#x27;)<br /></code>
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.MGTMT, Role.RD, Role.CA, Role.USER)<br />@Get(&#x27;findall/:idInterview&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:22</a></div>
                 </td>
             </tr>
 
@@ -648,9 +936,21 @@
 
                                 </tr>
                                 <tr>
-                                    <td>UserID</td>
+                                    <td>self</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>reqInfo</td>
+                                    <td>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -679,21 +979,21 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="findAllByMe"></a>
+                    <a name="findAllForGroup"></a>
                     <span class="name">
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier">Async</span>
-                        <span ><b>findAllByMe</b></span>
-                        <a href="#findAllByMe"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>findAllForGroup</b></span>
+                        <a href="#findAllForGroup"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findAllByMe(idInterview: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, req: Request)</code>
+                    <code>findAllForGroup(idGroup: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
                 </td>
             </tr>
 
@@ -701,14 +1001,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.USER)<br />@Get(&#x27;findallbyme/:idInterview&#x27;)<br /></code>
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA)<br />@Get(&#x27;findallforgroup/:idGroup&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:51</a></div>
                 </td>
             </tr>
 
@@ -729,7 +1029,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>idInterview</td>
+                                    <td>idGroup</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -741,9 +1041,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -772,21 +1072,21 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="findAllByUser"></a>
+                    <a name="findAllForRegion"></a>
                     <span class="name">
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier">Async</span>
-                        <span ><b>findAllByUser</b></span>
-                        <a href="#findAllByUser"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>findAllForRegion</b></span>
+                        <a href="#findAllForRegion"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findAllByUser(idInterview: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, req: Request)</code>
+                    <code>findAllForRegion(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
                 </td>
             </tr>
 
@@ -794,14 +1094,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA, Role.USER)<br />@Get(&#x27;findall/:idInterview&#x27;)<br /></code>
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA)<br />@Get(&#x27;findallforregion&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/models/fiszka/fiszka.controller.ts:45</a></div>
                 </td>
             </tr>
 
@@ -822,21 +1122,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>idInterview</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>req</td>
-                                    <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -879,7 +1167,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findAllForUser(UserID: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>findAllForUser(userId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -915,7 +1203,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>UserID</td>
+                                    <td>userId</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -946,11 +1234,9 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">
-import { Body, Controller, Get, Param, Patch, Post, Req, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, ForbiddenException, Get, Param, Patch, Post, UseFilters, UseGuards, Delete, Query } from &#x27;@nestjs/common&#x27;;
 import { RolesGuard } from &#x27;src/Auth/roles.guard&#x27;;
 import { FiszkaService } from &#x27;./fiszka.service&#x27;;
-import { Request } from &#x27;express&#x27;;
 import { Role } from &#x27;@prisma/client&#x27;;
 import { Roles } from &#x27;src/Auth/decorators/roles.decorator&#x27;;
 import { HttpExceptionFilter } from &#x27;src/common/validation/http-exception.filter&#x27;;
@@ -958,7 +1244,8 @@ import { GetFiszkaDto } from &#x27;./dto/GetFiszka.dto&#x27;;
 import { EditFiszkaDto } from &#x27;./dto/EditFiszka.dto&#x27;;
 import { CreateFiszkaDto } from &#x27;./dto/CreateFiszka.dto&#x27;;
 import { AddgroupDto } from &#x27;./dto/addGroup.dto&#x27;;
-
+import { ReqInfo, ReqUserInfo } from &#x27;src/Auth/decorators/reqinfo.decorator&#x27;;
+import { OptionsPipe } from &#x27;./options.pipe&#x27;;
 
 @Controller(&#x27;fiszka&#x27;)
 @UseGuards(RolesGuard)
@@ -966,62 +1253,88 @@ export class FiszkaController {
   constructor(private fiszkaService: FiszkaService) { }
 
   @UseFilters(new HttpExceptionFilter())
-  @Roles(Role.MGTMT, Role.RD, Role.CA)
-  @Get(&#x27;findall/:idInterview/:idEmployee&#x27;)
-  async findAllByInterview(@Param(&#x27;idInterview&#x27;) idInterview: string, @Param(&#x27;idEmployee&#x27;) UserID: string): Promise&lt;GetFiszkaDto[]&gt; {
-    return this.fiszkaService.findAllByInterview(idInterview, UserID)
-  }
-
-  @UseFilters(new HttpExceptionFilter())
-  @Roles(Role.RD, Role.CA, Role.USER)
+  @Roles(Role.MGTMT, Role.RD, Role.CA,Role.USER)
   @Get(&#x27;findall/:idInterview&#x27;)
-  async findAllByUser(@Param(&#x27;idInterview&#x27;) idInterview: string, @Req() req: Request): Promise&lt;GetFiszkaDto[]&gt; {
-    const UserID: string &#x3D; req[&#x27;user&#x27;].id;
-    return this.fiszkaService.findAllByUser(idInterview, UserID)
+  async findAllByInterview(@Param(&#x27;idInterview&#x27;) idInterview: string, @Query(&#x27;self&#x27;, OptionsPipe) self: number, @ReqInfo() reqInfo: ReqUserInfo): Promise&lt;GetFiszkaDto[]&gt; {
+
+    if (reqInfo.role.match(Role.USER)) {
+      return this.fiszkaService.findAllByUser(idInterview, reqInfo.id)
+    } else {
+      if (self) {
+        return this.fiszkaService.findAllByUser(idInterview, reqInfo.id)
+      } else {
+        return this.fiszkaService.findAllByInterview(idInterview)
+      }
+    }
   }
 
   @UseFilters(new HttpExceptionFilter())
   @Roles(Role.MGTMT, Role.RD, Role.CA)
   @Get(&#x27;findallforuser/:idEmployee&#x27;)
-  async findAllForUser(@Param(&#x27;idEmployee&#x27;) UserID: string): Promise&lt;GetFiszkaDto[]&gt; {
-    return this.fiszkaService.findAllForUser(UserID)
+  async findAllForUser(@Param(&#x27;idEmployee&#x27;) userId: string): Promise&lt;GetFiszkaDto[]&gt; {
+    return this.fiszkaService.findAllForUser(userId)
+  }
+
+  @UseFilters(new HttpExceptionFilter())
+  @Roles(Role.RD, Role.CA)
+  @Get(&#x27;findallforregion&#x27;)
+  async findAllForRegion(@ReqInfo() reqInfo: ReqUserInfo): Promise&lt;GetFiszkaDto[]&gt; {
+    return this.fiszkaService.findAllForRegion(reqInfo.region)
   }
   @UseFilters(new HttpExceptionFilter())
-  @Roles(Role.USER)
-  @Get(&#x27;findallbyme/:idInterview&#x27;)
-  async findAllByMe(@Param(&#x27;idInterview&#x27;) idInterview: string, @Req() req: Request): Promise&lt;GetFiszkaDto[]&gt; {
-    const UserID: string &#x3D; req[&#x27;user&#x27;].id;
-    return this.fiszkaService.findAllByMe(idInterview, UserID)
+  @Roles(Role.RD, Role.CA)
+  @Get(&#x27;findallforgroup/:idGroup&#x27;)
+  async findAllForGroup(@Param(&#x27;idGroup&#x27;) idGroup: string,@ReqInfo() reqInfo: ReqUserInfo): Promise&lt;GetFiszkaDto[]&gt; {
+    return this.fiszkaService.findAllForGroup(idGroup,reqInfo.region)
   }
+
   @UseFilters(new HttpExceptionFilter())
   @Roles(Role.MGTMT, Role.CA, Role.RD)
   @Patch(&#x27;editfiszka/:idFiszka&#x27;)
-  async editFiszkaRd(@Param(&#x27;idFiszka&#x27;) idFiszka: string, @Req() req: Request, @Body() body: EditFiszkaDto) {
-    const UserID: string &#x3D; req[&#x27;user&#x27;].id;
-    return this.fiszkaService.editFiszkaRd(idFiszka, UserID, body)
+  async editFiszkaRd(@Param(&#x27;idFiszka&#x27;) idFiszka: string, @ReqInfo() reqInfo: ReqUserInfo, @Body() body: EditFiszkaDto): Promise&lt;EditFiszkaDto | ForbiddenException&gt; {
+    return this.fiszkaService.editFiszkaRd(idFiszka, reqInfo.id, body)
   }
   @UseFilters(new HttpExceptionFilter())
   @Roles(Role.USER)
   @Patch(&#x27;editfiszka/:idFiszka/:idInterview&#x27;)
-  async editFiszkaUser(@Param(&#x27;idFiszka&#x27;) idFiszka: string, @Param(&#x27;idInterview&#x27;) idInterview: string, @Req() req: Request, @Body() body: EditFiszkaDto) {
-    const UserID: string &#x3D; req[&#x27;user&#x27;].id;
-    return this.fiszkaService.editFiszkaUser(idFiszka, UserID, idInterview, body)
+  async editFiszkaUser(@Param(&#x27;idFiszka&#x27;) idFiszka: string, @Param(&#x27;idInterview&#x27;) idInterview: string, @ReqInfo() reqInfo: ReqUserInfo, @Body() body: EditFiszkaDto): Promise&lt;EditFiszkaDto | ForbiddenException&gt; {
+    return this.fiszkaService.editFiszkaUser(idFiszka, reqInfo.id, idInterview, body)
   }
   @UseFilters(new HttpExceptionFilter())
   @Roles(Role.USER, Role.MGTMT, Role.CA, Role.RD)
   @Post(&#x27;addfiszki/:idInterview&#x27;)
-  async addFiszki(@Param(&#x27;idInterview&#x27;) idInterview: string, @Req() req: Request, @Body() body: CreateFiszkaDto[]) {
-    const UserID: string &#x3D; req[&#x27;user&#x27;].id;
-    return this.fiszkaService.addFiszki(idInterview, UserID, body)
+  async addFiszki(@Param(&#x27;idInterview&#x27;) idInterview: string, @ReqInfo() reqInfo: ReqUserInfo, @Body() body: CreateFiszkaDto) {
+    return this.fiszkaService.addFiszki(idInterview, reqInfo.id, body)
   }
 
+  @UseFilters(new HttpExceptionFilter())
+  @Roles(Role.MGTMT, Role.CA, Role.RD)
+  @Delete(&#x27;deletefiszka/:idFiszki&#x27;)
+  async deleteFiszka(@Param(&#x27;idFiszki&#x27;) idFiszka: string) {
+    return this.fiszkaService.deleteFiszka(idFiszka)
+  }
+  @UseFilters(new HttpExceptionFilter())
+  @Roles(Role.USER)
+  @Delete(&#x27;deletefiszka/:idFiszki&#x27;)
+  async deleteFiszkaByUser(@Param(&#x27;idFiszki&#x27;) idFiszka: string, @ReqInfo() reqInfo: ReqUserInfo) {
+    return this.fiszkaService.deleteFiszkaByMy(idFiszka, reqInfo.id)
+  }
   //do testu
   @UseFilters(new HttpExceptionFilter())
   @Roles(Role.CA, Role.RD)
   @Patch(&#x27;addgroup/:idgroup&#x27;)
-  async addGroup(@Param(&#x27;idgroup&#x27;) IdGroup: string, @Body() body: AddgroupDto) {
-    return this.fiszkaService.addGroup(IdGroup, body)
+  async addGroup(@Param(&#x27;idgroup&#x27;) idGroup: string, @Body() body: AddgroupDto) {
+    return this.fiszkaService.addGroup(idGroup, body)
   }
+
+  @UseFilters(new HttpExceptionFilter())
+  @Roles(Role.CA, Role.RD)
+  @Delete(&#x27;deletefiszka/:idfiszki/fromgroup/:idgroup&#x27;)
+  async deleteFiszkaFromGroup(@Param(&#x27;idgroup&#x27;) idGroup: string,@Param(&#x27;idfiszki&#x27;) idFiszki: string ):Promise&lt;void&gt; {
+    return this.fiszkaService.deleteFiszkaFromGroup(idGroup, idFiszki)
+  }
+  // wszystkie fiszki z regionu
+  // wszystkie grupy z regionu (nazwa szkoły i grupa)
   // dodanie fiszki do danej grupy
 
   //#TODO: Tworzenie fiszek PR, AC, DR  |id wywiadówki 

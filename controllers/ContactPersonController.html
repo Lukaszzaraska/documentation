@@ -101,6 +101,13 @@
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
+                                <a href="#delete" >delete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
                                 <a href="#edit" >edit</a>
                             </li>
                             <li>
@@ -108,14 +115,7 @@
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
-                                <a href="#getByIdForMgtmt" >getByIdForMgtmt</a>
-                            </li>
-                            <li>
-                                    <span class="modifier"></span>
-                                    <span class="modifier"></span>
-                                    <span class="modifier"></span>
-                                    <span class="modifier">Async</span>
-                                <a href="#getByIdForRd" >getByIdForRd</a>
+                                <a href="#getById" >getById</a>
                             </li>
                         </ul>
                     </td>
@@ -152,7 +152,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>create(idSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, req: Request, body: <a href="../classes/CreateContactPersontDto.html" target="_self">CreateContactPersontDto</a>)</code>
+                    <code>create(idSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, body: <a href="../classes/CreateContactPersontDto.html" target="_self">CreateContactPersontDto</a>)</code>
                 </td>
             </tr>
 
@@ -166,8 +166,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/models/personContact/contactPerson.controller.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/models/personContact/contactPerson.controller.ts:32</a></div>
                 </td>
             </tr>
 
@@ -200,9 +200,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -229,7 +229,100 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/CreateContactPersontDto.html" target="_self" >Promise&lt;CreateContactPersontDto&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="delete"></a>
+                    <span class="name">
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier">Async</span>
+                        <span ><b>delete</b></span>
+                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>delete(idContactPerson: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA)<br />@Delete(&#x27;delete/:idContactPerson&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/models/personContact/contactPerson.controller.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idContactPerson</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>reqInfo</td>
+                                    <td>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;ContactPerson&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -257,7 +350,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>edit(idContactPerson: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, schoolId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, req: Request, body: <a href="../classes/EditContactPersontDto.html" target="_self">EditContactPersontDto</a>)</code>
+                    <code>edit(idContactPerson: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, schoolId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, body: <a href="../classes/EditContactPersontDto.html" target="_self">EditContactPersontDto</a>)</code>
                 </td>
             </tr>
 
@@ -271,8 +364,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/models/personContact/contactPerson.controller.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/models/personContact/contactPerson.controller.ts:39</a></div>
                 </td>
             </tr>
 
@@ -317,9 +410,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -346,7 +439,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/EditContactPersontDto.html" target="_self" >Promise&lt;EditContactPersontDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -360,21 +453,21 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getByIdForMgtmt"></a>
+                    <a name="getById"></a>
                     <span class="name">
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier">Async</span>
-                        <span ><b>getByIdForMgtmt</b></span>
-                        <a href="#getByIdForMgtmt"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>getById</b></span>
+                        <a href="#getById"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getByIdForMgtmt(idSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>getById(idSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
                 </td>
             </tr>
 
@@ -382,7 +475,7 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.MGTMT)<br />@Get(&#x27;get/mgtmt/:idSchool&#x27;)<br /></code>
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA, Role.MGTMT)<br />@Get(&#x27;get/:idSchool&#x27;)<br /></code>
                 </td>
             </tr>
 
@@ -421,91 +514,10 @@
 
 
                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/GetContactPersontDto.html" target="_self" >Promise&lt;GetContactPersontDto[]&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getByIdForRd"></a>
-                    <span class="name">
-                        <span class="modifier"></span>
-                        <span class="modifier"></span>
-                        <span class="modifier"></span>
-                        <span class="modifier">Async</span>
-                        <span ><b>getByIdForRd</b></span>
-                        <a href="#getByIdForRd"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getByIdForRd(idSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, req: Request)</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA)<br />@Get(&#x27;get/rd/:idSchool&#x27;)<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/models/personContact/contactPerson.controller.ts:28</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
                                 <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>idSchool</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>req</td>
-                                    <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -534,52 +546,53 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">
-import { Body, Controller, Get, Param, Patch, Post, Req, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, Delete, Get, Param, Patch, Post, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
 import { ContactPersonService } from &#x27;./contactPerson.service&#x27;;
 import { RolesGuard } from &#x27;src/Auth/roles.guard&#x27;;
-import { Request } from &#x27;express&#x27;;
-import { Role } from &#x27;@prisma/client&#x27;;
+import { ContactPerson, Role } from &#x27;@prisma/client&#x27;;
 import { Roles } from &#x27;src/Auth/decorators/roles.decorator&#x27;;
 import { HttpExceptionFilter } from &#x27;src/common/validation/http-exception.filter&#x27;;
 import { GetContactPersontDto } from &#x27;./dto/getContactPerson.dto&#x27;;
 import { CreateContactPersontDto } from &#x27;./dto/createContactPerson.dto&#x27;;
 import { EditContactPersontDto } from &#x27;./dto/editContactPerson.dto&#x27;;
+import { ReqInfo, ReqUserInfo } from &#x27;src/Auth/decorators/reqinfo.decorator&#x27;;
 
 @UseGuards(RolesGuard)
 @Controller(&#x27;contactperson&#x27;)
-export class ContactPersonController { 
+export class ContactPersonController {
     constructor(private ContactPersonService: ContactPersonService) { }
-    
-    @UseFilters(new HttpExceptionFilter())
-    @Roles(Role.MGTMT)
-    @Get(&#x27;get/mgtmt/:idSchool&#x27;)
-    async getByIdForMgtmt(@Param(&#x27;idSchool&#x27;) idSchool: string): Promise&lt;GetContactPersontDto[]&gt; {
-        return this.ContactPersonService.getByIdForMgtmt(idSchool);
-    }
+
 
     @UseFilters(new HttpExceptionFilter())
-    @Roles(Role.RD, Role.CA)
-    @Get(&#x27;get/rd/:idSchool&#x27;)
-    async getByIdForRd(@Param(&#x27;idSchool&#x27;) idSchool: string, @Req() req: Request): Promise&lt;GetContactPersontDto[]&gt; {
-        const region: string &#x3D; req[&#x27;user&#x27;].region;
-        return this.ContactPersonService.getByIdForRd(idSchool, region);
+    @Roles(Role.RD, Role.CA, Role.MGTMT)
+    @Get(&#x27;get/:idSchool&#x27;)
+    async getById(@Param(&#x27;idSchool&#x27;) idSchool: string, @ReqInfo() reqInfo: ReqUserInfo): Promise&lt;GetContactPersontDto[]&gt; {
+        if (reqInfo.role.match(Role.MGTMT)) {
+            return this.ContactPersonService.getByIdForMgtmt(idSchool);
+        } else {
+            return this.ContactPersonService.getByIdForRd(idSchool, reqInfo.region);
+        }
     }
 
     @UseFilters(new HttpExceptionFilter())
     @Roles(Role.RD, Role.CA)
     @Post(&#x27;create/:idSchool&#x27;)
-    async create(@Param(&#x27;idSchool&#x27;) idSchool: string, @Req() req: Request, @Body() body: CreateContactPersontDto) {
-        const region: string &#x3D; req[&#x27;user&#x27;].region;
-        return this.ContactPersonService.create(idSchool, region, body);
+    async create(@Param(&#x27;idSchool&#x27;) idSchool: string, @ReqInfo() reqInfo: ReqUserInfo, @Body() body: CreateContactPersontDto): Promise&lt;CreateContactPersontDto&gt; {
+        return this.ContactPersonService.create(idSchool, reqInfo.region, body);
     }
-    
+
     @UseFilters(new HttpExceptionFilter())
     @Roles(Role.RD, Role.CA)
     @Patch(&#x27;edit/:schoolId/:idContactPerson&#x27;)
-    async edit(@Param(&#x27;idContactPerson&#x27;) idContactPerson: string,@Param(&#x27;schoolId&#x27;) schoolId: string, @Req() req: Request, @Body() body: EditContactPersontDto) {
-        const region: string &#x3D; req[&#x27;user&#x27;].region;
-        return this.ContactPersonService.edit(idContactPerson,schoolId, region, body);
+    async edit(@Param(&#x27;idContactPerson&#x27;) idContactPerson: string, @Param(&#x27;schoolId&#x27;) schoolId: string, @ReqInfo() reqInfo: ReqUserInfo, @Body() body: EditContactPersontDto): Promise&lt;EditContactPersontDto&gt; {
+        return this.ContactPersonService.edit(idContactPerson, schoolId, reqInfo.region, body);
+    }
+
+    @UseFilters(new HttpExceptionFilter())
+    @Roles(Role.RD, Role.CA)
+    @Delete(&#x27;delete/:idContactPerson&#x27;)
+    async delete(@Param(&#x27;idContactPerson&#x27;) idContactPerson: string, @ReqInfo() reqInfo: ReqUserInfo): Promise&lt;ContactPerson&gt; {
+        return this.ContactPersonService.delete(idContactPerson, reqInfo.region);
     }
 }
 </code></pre>

@@ -129,7 +129,35 @@
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
+                                <a href="#findFiszkiForDate" >findFiszkiForDate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
+                                <a href="#findFiszkiForDateInInterview" >findFiszkiForDateInInterview</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
+                                <a href="#findFiszkiForDateInRegion" >findFiszkiForDateInRegion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
                                 <a href="#findTotalById" >findTotalById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
+                                <a href="#selfEdit" >selfEdit</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
@@ -173,7 +201,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>createUser(createUserDto: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, req: Request)</code>
+                    <code>createUser(createUserDto: CreateUserForMGTMTDto | CreateUserForRdDto, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
                 </td>
             </tr>
 
@@ -187,8 +215,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="74"
-                            class="link-to-prism">src/models/user/user.controller.ts:74</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/models/user/user.controller.ts:71</a></div>
                 </td>
             </tr>
 
@@ -211,7 +239,7 @@
                                 <tr>
                                     <td>createUserDto</td>
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <code>CreateUserForMGTMTDto | CreateUserForRdDto</code>
                                     </td>
 
                                     <td>
@@ -221,9 +249,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -266,7 +294,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>editUser(Id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, editUserDto: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, req: Request)</code>
+                    <code>editUser(Id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, editUserDto: EditUserForMGTMTDto | EditUserForRdDto, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
                 </td>
             </tr>
 
@@ -274,14 +302,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA, Role.MGTMT)<br />@Patch(&#x27;:id&#x27;)<br /></code>
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA, Role.MGTMT)<br />@Patch(&#x27;edituser/:id&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="97"
-                            class="link-to-prism">src/models/user/user.controller.ts:97</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/models/user/user.controller.ts:83</a></div>
                 </td>
             </tr>
 
@@ -316,7 +344,7 @@
                                 <tr>
                                     <td>editUserDto</td>
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <code>EditUserForMGTMTDto | EditUserForRdDto</code>
                                     </td>
 
                                     <td>
@@ -326,9 +354,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -343,7 +371,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>    <code>Promise&lt;EditUserForMGTMTDto | EditUserForRdDto&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -371,7 +399,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findAll(req: Request)</code>
+                    <code>findAll(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
                 </td>
             </tr>
 
@@ -407,9 +435,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -466,8 +494,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">src/models/user/user.controller.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/models/user/user.controller.ts:44</a></div>
                 </td>
             </tr>
 
@@ -533,7 +561,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findById(Id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, req: Request)</code>
+                    <code>findById(Id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
                 </td>
             </tr>
 
@@ -541,14 +569,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA, Role.MGTMT)<br />@Get(&#x27;:id&#x27;)<br /></code>
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA, Role.MGTMT)<br />@Get(&#x27;findbyid/:id&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="53"
-                            class="link-to-prism">src/models/user/user.controller.ts:53</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/models/user/user.controller.ts:51</a></div>
                 </td>
             </tr>
 
@@ -581,9 +609,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>req</td>
+                                    <td>reqInfo</td>
                                     <td>
-                                            <code>Request</code>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -612,21 +640,21 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="findTotalById"></a>
+                    <a name="findFiszkiForDate"></a>
                     <span class="name">
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier"></span>
                         <span class="modifier">Async</span>
-                        <span ><b>findTotalById</b></span>
-                        <a href="#findTotalById"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>findFiszkiForDate</b></span>
+                        <a href="#findFiszkiForDate"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findTotalById(req: Request)</code>
+                    <code>findFiszkiForDate(idUser: string | null, date: <a href="../classes/GraphDateDto.html" target="_self">GraphDateDto</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
                 </td>
             </tr>
 
@@ -634,14 +662,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.USER, Role.MGTMT, Role.CA, Role.RD)<br />@Get(&#x27;total&#x27;)<br /></code>
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.MGTMT, Role.CA, Role.RD, Role.USER)<br />@Get(&#x27;fiszkiforday/:IdUser?&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="66"
-                            class="link-to-prism">src/models/user/user.controller.ts:66</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="102"
+                            class="link-to-prism">src/models/user/user.controller.ts:102</a></div>
                 </td>
             </tr>
 
@@ -662,9 +690,312 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>req</td>
+                                    <td>idUser</td>
                                     <td>
-                                            <code>Request</code>
+                                            <code>string | null</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>date</td>
+                                    <td>
+                                                <code><a href="../classes/GraphDateDto.html" target="_self" >GraphDateDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>reqInfo</td>
+                                    <td>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;getGraphDateDto[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findFiszkiForDateInInterview"></a>
+                    <span class="name">
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier">Async</span>
+                        <span ><b>findFiszkiForDateInInterview</b></span>
+                        <a href="#findFiszkiForDateInInterview"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findFiszkiForDateInInterview(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, idSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, Date: <a href="../classes/GraphDateDto.html" target="_self">GraphDateDto</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.MGTMT, Role.CA, Role.RD)<br />@Get(&#x27;fiszkifordaybyinterview/:IdSchool&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/models/user/user.controller.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>reqInfo</td>
+                                    <td>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>idSchool</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>Date</td>
+                                    <td>
+                                                <code><a href="../classes/GraphDateDto.html" target="_self" >GraphDateDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findFiszkiForDateInRegion"></a>
+                    <span class="name">
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier">Async</span>
+                        <span ><b>findFiszkiForDateInRegion</b></span>
+                        <a href="#findFiszkiForDateInRegion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findFiszkiForDateInRegion(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>, Date: <a href="../classes/GraphDateDto.html" target="_self">GraphDateDto</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.CA, Role.RD)<br />@Get(&#x27;fiszkifordaybyinterview&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">src/models/user/user.controller.ts:121</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>reqInfo</td>
+                                    <td>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>Date</td>
+                                    <td>
+                                                <code><a href="../classes/GraphDateDto.html" target="_self" >GraphDateDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findTotalById"></a>
+                    <span class="name">
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier">Async</span>
+                        <span ><b>findTotalById</b></span>
+                        <a href="#findTotalById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findTotalById(reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.USER, Role.MGTMT, Role.CA, Role.RD)<br />@Get(&#x27;total&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/models/user/user.controller.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>reqInfo</td>
+                                    <td>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
                                     </td>
 
                                     <td>
@@ -680,6 +1011,99 @@
                     </div>
                     <div class="io-description">
                         <b>Returns : </b>    <code>Promise&lt;number&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selfEdit"></a>
+                    <span class="name">
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier">Async</span>
+                        <span ><b>selfEdit</b></span>
+                        <a href="#selfEdit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>selfEdit(editUserDto: <a href="../classes/EditSelfDto.html" target="_self">EditSelfDto</a>, reqInfo: <a href="../interfaces/ReqUserInfo.html" target="_self">ReqUserInfo</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.RD, Role.CA, Role.MGTMT, Role.USER)<br />@Patch(&#x27;self&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/models/user/user.controller.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>editUserDto</td>
+                                    <td>
+                                                <code><a href="../classes/EditSelfDto.html" target="_self" >EditSelfDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>reqInfo</td>
+                                    <td>
+                                                <code><a href="../interfaces/ReqUserInfo.html" target="_self" >ReqUserInfo</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/EditSelfDto.html" target="_self" >Promise&lt;EditSelfDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -721,8 +1145,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/models/user/user.controller.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/models/user/user.controller.ts:26</a></div>
                 </td>
             </tr>
 
@@ -774,20 +1198,22 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BadRequestException, Body, Controller, Get, Param, Patch, Post, Req, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, Get, Param, Patch, Post, Query, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
 import { UserService } from &#x27;./user.service&#x27;;
 import { CreateUserForMGTMTDto, CreateUserForRdDto } from &#x27;./dto/createUser.dto&#x27;;
 import { Role } from &#x27;@prisma/client&#x27;;
-import { Request } from &#x27;express&#x27;;
 import { RolesGuard } from &#x27;./../../Auth/roles.guard&#x27;;
-import { EditUserForMGTMTDto, EditUserForRdDto } from &#x27;./dto/editUser.dto&#x27;;
+import { EditSelfDto, EditUserForMGTMTDto, EditUserForRdDto } from &#x27;./dto/editUser.dto&#x27;;
 import { GetUserDto } from &#x27;./dto/GetUser.dto&#x27;;
 import { HttpExceptionFilter } from &#x27;./../../common/validation/http-exception.filter&#x27;;
-import { Roles } from &#x27;src/Auth/decorators/roles.decorator&#x27;;
+import { Roles } from &#x27;./../../Auth/decorators/roles.decorator&#x27;;
 import { UpperCasePipe } from &#x27;./upperCasePipe.pipe&#x27;;
-import { ClassValidator } from &#x27;src/common/helpers/ClassValidator&#x27;;
 import { ValidationdDto } from &#x27;./dto/validation.dto&#x27;;
-
+import { DtoValidatorPipe } from &#x27;./dtoValidator.pipe&#x27;;
+import { ReqInfo, ReqUserInfo } from &#x27;../../Auth/decorators/reqinfo.decorator&#x27;;
+import { DtoValidatorSelfPipe } from &#x27;./dtoValidatorSelf.pipe&#x27;;
+import { GraphDateDto } from &#x27;./dto/GraphDate.dto&#x27;;
+import { getGraphDateDto } from &#x27;./dto/getGraphDate.dto&#x27;;
 
 @Controller(&#x27;user&#x27;)
 @UseGuards(RolesGuard)
@@ -797,22 +1223,18 @@ export class UserController {
   @UseFilters(new HttpExceptionFilter())
   @Roles(Role.RD, Role.CA, Role.MGTMT)
   @Post(&#x27;validation&#x27;)
-  async validation(@Body() ValidationUserDto: ValidationdDto): Promise&lt;{InDatabase: boolean}&gt; {
+  async validation(@Body() ValidationUserDto: ValidationdDto): Promise&lt;{ InDatabase: boolean }&gt; {
     return this.userService.Validation(ValidationUserDto)
   }
-
-
 
   @UseFilters(new HttpExceptionFilter())
   @Roles(Role.RD, Role.CA, Role.MGTMT)
   @Get(&#x27;findall&#x27;)
-  async findAll(@Req() req: Request): Promise&lt;GetUserDto[]&gt; {
-    const role: Role &#x3D; req[&#x27;user&#x27;].role
-    if (role.match(Role.MGTMT)) {
+  async findAll(@ReqInfo() reqInfo: ReqUserInfo): Promise&lt;GetUserDto[]&gt; {
+    if (reqInfo.role.match(Role.MGTMT)) {
       return this.userService.findAll();
-    } else {
-      const region: string &#x3D; req[&#x27;user&#x27;].region;
-      return this.userService.findByRegion(region, role);
+    } else if (reqInfo.role.match(Role.RD) || reqInfo.role.match(Role.CA)) {
+      return this.userService.findByRegion(reqInfo.region, reqInfo.role);
     }
   }
 
@@ -825,74 +1247,95 @@ export class UserController {
 
   @UseFilters(new HttpExceptionFilter())
   @Roles(Role.RD, Role.CA, Role.MGTMT)
-  @Get(&#x27;:id&#x27;)
-  async findById(@Param(&#x27;id&#x27;) Id: string, @Req() req: Request): Promise&lt;GetUserDto&gt; {
-    const role: Role &#x3D; req[&#x27;user&#x27;].role
-    if (role.match(Role.MGTMT)) {
+  @Get(&#x27;findbyid/:id&#x27;)
+  async findById(@Param(&#x27;id&#x27;) Id: string, @ReqInfo() reqInfo: ReqUserInfo): Promise&lt;GetUserDto&gt; {
+
+    if (reqInfo.role.match(Role.MGTMT)) {
       return this.userService.findById(Id);
     } else {
-      const region: string &#x3D; req[&#x27;user&#x27;].region;
-      return this.userService.findById(Id, region);
+      return this.userService.findById(Id, reqInfo.region);
     }
   }
 
   @UseFilters(new HttpExceptionFilter())
   @Roles(Role.USER, Role.MGTMT, Role.CA, Role.RD)
   @Get(&#x27;total&#x27;)
-  async findTotalById(@Req() req: Request): Promise&lt;number&gt; {
-    const UserId: string &#x3D; req[&#x27;user&#x27;].id
-    return this.userService.findTotalById(UserId);
+  async findTotalById(@ReqInfo() reqInfo: ReqUserInfo): Promise&lt;number&gt; {
+    return this.userService.findTotalById(reqInfo.id);
   }
+
 
   @UseFilters(new HttpExceptionFilter())
   @Roles(Role.RD, Role.MGTMT)
   @Post()
-  async createUser(@Body(UpperCasePipe) createUserDto: any, @Req() req: Request): Promise&lt;GetUserDto&gt; {
-    const role: Role &#x3D; req[&#x27;user&#x27;].role
-    if (role.match(Role.MGTMT)) {
-      const validationResult &#x3D; await ClassValidator(createUserDto, CreateUserForMGTMTDto);
-      if (validationResult instanceof BadRequestException) {
-        throw validationResult;
-      }
-      const createUser: CreateUserForMGTMTDto &#x3D; createUserDto
-      return this.userService.CreateUserForMGTMT(createUser);
+  async createUser(@Body(UpperCasePipe, DtoValidatorPipe) createUserDto: CreateUserForMGTMTDto | CreateUserForRdDto, @ReqInfo() reqInfo: ReqUserInfo): Promise&lt;GetUserDto&gt; {
+    const createUser: CreateUserForMGTMTDto | CreateUserForRdDto &#x3D; createUserDto;
+    if (reqInfo.role.match(Role.MGTMT)) {
+      return this.userService.CreateUserForMGTMT(createUser as CreateUserForMGTMTDto);
     } else {
-      const validationResult &#x3D; await ClassValidator(createUserDto, CreateUserForRdDto);
-      if (validationResult instanceof BadRequestException) {
-        throw validationResult;
-      }
-      const createUser: CreateUserForRdDto &#x3D; createUserDto
-      const region: string &#x3D; req[&#x27;user&#x27;].region
-      return this.userService.CreateUserForRd(createUser, region);
+      return this.userService.CreateUserForRd(createUser as CreateUserForRdDto, reqInfo.region);
     }
   }
 
   @UseFilters(new HttpExceptionFilter())
   @Roles(Role.RD, Role.CA, Role.MGTMT)
-  @Patch(&#x27;:id&#x27;)
-  async editUser(@Param(&#x27;id&#x27;) Id: string, @Body(UpperCasePipe) editUserDto: any, @Req() req: Request) {
-    const role: Role &#x3D; req[&#x27;user&#x27;].role
-    if (role.match(Role.MGTMT)) {
-      const validationResult &#x3D; await ClassValidator(editUserDto, EditUserForMGTMTDto);
-      if (validationResult instanceof BadRequestException) {
-        throw validationResult;
-      }
-      const editUser: EditUserForMGTMTDto &#x3D; editUserDto
-      return this.userService.EditUserForMGTMT(editUser, Id)
+  @Patch(&#x27;edituser/:id&#x27;)
+  async editUser(@Param(&#x27;id&#x27;) Id: string, @Body(UpperCasePipe, DtoValidatorPipe) editUserDto: EditUserForMGTMTDto | EditUserForRdDto, @ReqInfo() reqInfo: ReqUserInfo): Promise&lt;EditUserForMGTMTDto | EditUserForRdDto&gt; {
+
+    if (reqInfo.role.match(Role.MGTMT)) {
+      return this.userService.EditUserForMGTMT(editUserDto as EditUserForMGTMTDto, Id)
     } else {
-      const validationResult &#x3D; await ClassValidator(editUserDto, EditUserForRdDto);
-      if (validationResult instanceof BadRequestException) {
-        throw validationResult;
-      }
-      const editUser: EditUserForRdDto &#x3D; editUserDto
-      const region: string &#x3D; req[&#x27;user&#x27;].region;
-      return this.userService.EditUserForRd(editUser, Id, region, role)
+      return this.userService.EditUserForRd(editUserDto as EditUserForRdDto, Id, reqInfo.region, reqInfo.role)
     }
   }
+  @UseFilters(new HttpExceptionFilter())
+  @Roles(Role.RD, Role.CA, Role.MGTMT, Role.USER)
+  @Patch(&#x27;self&#x27;)
+  async selfEdit(@Body(UpperCasePipe, DtoValidatorSelfPipe) editUserDto: EditSelfDto, @ReqInfo() reqInfo: ReqUserInfo): Promise&lt;EditSelfDto&gt; {
+    return this.userService.EditSelf(editUserDto, reqInfo.id)
+  }
 
+  // podział na role ?
+  @UseFilters(new HttpExceptionFilter())
+  @Roles(Role.MGTMT, Role.CA, Role.RD, Role.USER)
+  @Get(&#x27;fiszkiforday/:IdUser?&#x27;)
+  async findFiszkiForDate(
+    @Param(&#x27;IdUser&#x27;) idUser: string | null,
+    @Query() date: GraphDateDto,
+    @ReqInfo() reqInfo: ReqUserInfo
+  ): Promise&lt;getGraphDateDto[]&gt; {
+    const effectiveIdUser &#x3D; reqInfo.role.match(Role.USER) || !idUser ? reqInfo.id : idUser;
+    return this.userService.findFiszkiForDateByUser(effectiveIdUser, date);
+  }
+
+  @UseFilters(new HttpExceptionFilter())
+  @Roles(Role.MGTMT, Role.CA, Role.RD)
+  @Get(&#x27;fiszkifordaybyinterview/:IdSchool&#x27;)
+  async findFiszkiForDateInInterview(@ReqInfo() reqInfo: ReqUserInfo, @Param(&#x27;IdSchool&#x27;) idSchool: string, @Query() Date: GraphDateDto) {
+    console.log(Date);
+    return this.userService.findFiszkiForDateInInterview(idSchool, Date, reqInfo.region);
+  }
+  @UseFilters(new HttpExceptionFilter())
+  @Roles(Role.CA, Role.RD)
+  @Get(&#x27;fiszkifordaybyinterview&#x27;)
+  async findFiszkiForDateInRegion(@ReqInfo() reqInfo: ReqUserInfo, @Query() Date: GraphDateDto) {
+   
+    return this.userService.findFiszkiForDateInRegion(reqInfo.region, Date);
+  }
 }
 
-</code></pre>
+// Dostaje: user i przedział czasowy
+// Daje : ilość fiszek i (dzień)
+
+// Dostaje:Id i przedział czasowy
+// Daje : Wywiadówka i ilość fiszek
+
+// Dostaje:Region  i przedział czasowy(zawsze rok)
+// Daje : Szkoła i ilość fiszek w szkole
+
+
+// Profil  - Dostaje - UżytkownikId zawsze rok przedział czasowy
+// Szkoła i ilośc zebranych fiszek pre user</code></pre>
     </div>
 </div>
 

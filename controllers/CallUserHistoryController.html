@@ -68,7 +68,7 @@
                 <h3>Prefix</h3>
             </p>
             <p class="comment">
-                <code>callUserHistory</code>
+                <code>calluserhistory</code>
             </p>
 
 
@@ -95,6 +95,13 @@
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
                                 <a href="#AddUserCall" >AddUserCall</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
+                                <a href="#DeleteUserCall" >DeleteUserCall</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
@@ -152,8 +159,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/models/callUserHistory/calluserhistory.controller.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/models/callUserHistory/calluserhistory.controller.ts:28</a></div>
                 </td>
             </tr>
 
@@ -203,7 +210,88 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/CreateCallUserDto.html" target="_self" >Promise&lt;CreateCallUserDto&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="DeleteUserCall"></a>
+                    <span class="name">
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
+                        <span class="modifier">Async</span>
+                        <span ><b>DeleteUserCall</b></span>
+                        <a href="#DeleteUserCall"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>DeleteUserCall(IdPhoneCalls: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseFilters(new HttpExceptionFilter())<br />@Roles(Role.MGTMT, Role.CA, Role.RD)<br />@Delete(&#x27;delete/:idphonecalls&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/models/callUserHistory/calluserhistory.controller.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>IdPhoneCalls</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -245,8 +333,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/models/callUserHistory/calluserhistory.controller.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/models/callUserHistory/calluserhistory.controller.ts:22</a></div>
                 </td>
             </tr>
 
@@ -298,21 +386,20 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">
-import { Body, Controller, Get, Param, Post, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, Delete, Get, Param, Post, UseFilters, UseGuards } from &#x27;@nestjs/common&#x27;;
 import { RolesGuard } from &#x27;src/Auth/roles.guard&#x27;;
-import { CallUserHistoryService } from &#x27;./calluserhistory.service&#x27;;
 import { Role } from &#x27;@prisma/client&#x27;;
 import { Roles } from &#x27;src/Auth/decorators/roles.decorator&#x27;;
 import { HttpExceptionFilter } from &#x27;src/common/validation/http-exception.filter&#x27;;
-import { GetCallUserHistoryDto } from &#x27;./dto/GetCallUserHistory.dto&#x27;;
+import { CallUserHistoryService } from &#x27;./calluserhistory.service&#x27;;
 import { CreateCallUserDto } from &#x27;./dto/CreateCallUser.dto&#x27;;
+import { GetCallUserHistoryDto } from &#x27;./dto/GetCallUserHistory.dto&#x27;;
 
 
 // założenia:
 // DR i AC może dodawać rozmowy ( czyli dzwonić do kandydatów )
 
-@Controller(&quot;callUserHistory&quot;)
+@Controller(&quot;calluserhistory&quot;)
 @UseGuards(RolesGuard)
 export class CallUserHistoryController {
     constructor(private callUserService: CallUserHistoryService) { }
@@ -326,11 +413,15 @@ export class CallUserHistoryController {
     @UseFilters(new HttpExceptionFilter())
     @Roles(Role.MGTMT, Role.CA, Role.RD)
     @Post(&#x27;addcalluser/:idFiszka&#x27;)
-    async AddUserCall(@Param(&#x27;idFiszka&#x27;) idFiszka: string, @Body() data: CreateCallUserDto) {
+    async AddUserCall(@Param(&#x27;idFiszka&#x27;) idFiszka: string, @Body() data: CreateCallUserDto): Promise&lt;CreateCallUserDto&gt; {
         return this.callUserService.AddUserCall(idFiszka, data)
-
     }
-   
+    @UseFilters(new HttpExceptionFilter())
+    @Roles(Role.MGTMT, Role.CA, Role.RD)
+    @Delete(&#x27;delete/:idphonecalls&#x27;)
+    async DeleteUserCall(@Param(&#x27;idphonecalls&#x27;) IdPhoneCalls: string): Promise&lt;void&gt; {
+        return this.callUserService.DeleteUserCall(IdPhoneCalls)
+    }
 }
 </code></pre>
     </div>
