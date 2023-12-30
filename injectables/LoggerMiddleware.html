@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content guard">
+               <div class="content injectable">
                    <div class="content-data">
 
 
@@ -38,11 +38,9 @@
 
 
 
-
-
 <ol class="breadcrumb">
-    <li class="breadcrumb-item">Guards</li>
-    <li class="breadcrumb-item" >RolesGuard</li>
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >LoggerMiddleware</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,20 +59,19 @@
 </ul>
 
 <div class="tab-content">
-        <div class="tab-pane fade active in" id="info">
-            <p class="comment">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
             <h3>File</h3>
-            </p>
-            <p class="comment">
-                <code>src/Auth/roles.guard.ts</code>
-            </p>
+        </p>
+        <p class="comment">
+            <code>src/common/logger.middleware.ts</code>
+        </p>
 
 
 
 
 
-
-                <section data-compodoc="block-index">
+            <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -88,7 +85,8 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#canActivate" >canActivate</a>
+                                    <span class="modifier">Async</span>
+                                <a href="#use" >use</a>
                             </li>
                         </ul>
                     </td>
@@ -102,18 +100,18 @@
     </table>
 </section>
 
-                <section data-compodoc="block-constructor">
+            <section data-compodoc="block-constructor">
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(reflector: Reflector)</code>
+<code>constructor(jwtService: JwtService, prisma: PrismaService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/Auth/roles.guard.ts:7</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/common/logger.middleware.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -131,10 +129,22 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>reflector</td>
+                                                        <td>jwtService</td>
                                                   
                                                         <td>
-                                                                    <code>Reflector</code>
+                                                                    <code>JwtService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>prisma</td>
+                                                  
+                                                        <td>
+                                                                    <code>PrismaService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -151,7 +161,7 @@
         </table>
 </section>
 
-                <section data-compodoc="block-methods">
+            <section data-compodoc="block-methods">
     
     <h3 id="methods">
         Methods
@@ -160,24 +170,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="canActivate"></a>
+                    <a name="use"></a>
                     <span class="name">
-                        <span ><b>canActivate</b></span>
-                        <a href="#canActivate"><span class="icon ion-ios-link"></span></a>
+                        <span class="modifier">Async</span>
+                        <span ><b>use</b></span>
+                        <a href="#use"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>canActivate(context: ExecutionContext)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>use(req: Request, res: Response, next: NextFunction)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="10"
-                            class="link-to-prism">src/Auth/roles.guard.ts:10</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/common/logger.middleware.ts:14</a></div>
                 </td>
             </tr>
 
@@ -198,9 +210,33 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>context</td>
+                                    <td>req</td>
                                     <td>
-                                            <code>ExecutionContext</code>
+                                            <code>Request</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                            <code>Response</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>next</td>
+                                    <td>
+                                            <code>NextFunction</code>
                                     </td>
 
                                     <td>
@@ -215,7 +251,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                     <div class="io-description">
@@ -226,39 +262,65 @@
         </tbody>
     </table>
 </section>
-        </div>
+
+    </div>
 
 
-        <div class="tab-pane fade  tab-source-code" id="source">
-            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, CanActivate, ExecutionContext } from &#x27;@nestjs/common&#x27;;
-import { Reflector } from &#x27;@nestjs/core&#x27;;
-import { Role } from &#x27;@prisma/client&#x27;;
-import { ROLES_KEY } from &#x27;./decorators/roles.decorator&#x27;;
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, NestMiddleware } from &#x27;@nestjs/common&#x27;;
+import { JwtService } from &#x27;@nestjs/jwt&#x27;;
+import { Request, Response, NextFunction } from &#x27;express&#x27;;
+import { PrismaService } from &#x27;prisma/prisma.service&#x27;;
+import { DecodeDto } from &#x27;src/Auth/dto/decode.dto&#x27;;
+
 
 @Injectable()
-export class RolesGuard implements CanActivate {
-  constructor(private reflector: Reflector) {}
+export class LoggerMiddleware implements NestMiddleware {
+    constructor(
+        private jwtService: JwtService, private prisma: PrismaService
+    ) { }
 
-  canActivate(context: ExecutionContext): boolean {
-    const requiredRoles &#x3D; this.reflector.getAllAndOverride&lt;Role[]&gt;(ROLES_KEY, [
-      context.getHandler(),
-      context.getClass(),
-    ]);
-    if (!requiredRoles) {
-      return true;
+    async use(req: Request, res: Response, next: NextFunction) {
+
+        
+        const decoded &#x3D; this.jwtService.decode(req.headers.authorization.slice(7));
+     
+        // const log &#x3D; await this.prisma.logger.create({
+        //     data: {
+        //         url: req.url,
+        //         originUrl: req.originalUrl,
+        //         method: req.method,
+        //         host: req.headers.host,
+        //         idUser: decoded.id,
+        //         email: decoded.email,
+        //         role: decoded.role,
+        //         region: decoded.region
+        //     }}
+        // )
+
+        const log &#x3D; {
+            data: {
+                url: req.url,
+                originUrl: req.originalUrl,
+                method: req.method,
+                host: req.headers.host,
+                decode:decoded
+            }
+        }
+
+         console.log(log);
+
+        next();
     }
-  //   const { user }:{user:User} &#x3D; context.switchToHttp().getRequest();
-
-  //  return requiredRoles.some((role)&#x3D;&gt;user.role.includes(role))
-   const { user } &#x3D; context.switchToHttp().getRequest();
-  //console.log(user.role)
-
-   return requiredRoles.some((role) &#x3D;&gt; user.role?.includes(role));
-  }
 }
+
+
 </code></pre>
-        </div>
+    </div>
+
 </div>
+
+
 
 
 
@@ -295,8 +357,8 @@ export class RolesGuard implements CanActivate {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'guard';
-            var COMPODOC_CURRENT_PAGE_URL = 'RolesGuard.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoggerMiddleware.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

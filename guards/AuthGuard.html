@@ -118,7 +118,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/Auth/auth.guard.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/Auth/auth.guard.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -195,8 +195,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">src/Auth/auth.guard.ts:18</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/Auth/auth.guard.ts:17</a></div>
                 </td>
             </tr>
 
@@ -266,8 +266,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="49"
-                            class="link-to-prism">src/Auth/auth.guard.ts:49</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/Auth/auth.guard.ts:51</a></div>
                 </td>
             </tr>
 
@@ -329,7 +329,6 @@
   import { Reflector } from &#x27;@nestjs/core&#x27;;
   import { JwtService } from &#x27;@nestjs/jwt&#x27;;
   import { Request } from &#x27;express&#x27;;
-  import { jwtConstants } from &#x27;./constants&#x27;;
   import { IS_PUBLIC_KEY } from &#x27;./decorators/public.decorator&#x27;;
   const jwtSecretKey &#x3D; process.env.JWT_SECRET;
 
@@ -338,6 +337,8 @@
     constructor(private jwtService: JwtService, private reflector: Reflector) {}
   
     async canActivate(context: ExecutionContext): Promise&lt;boolean&gt; {
+      
+      
       const isPublic &#x3D; this.reflector.getAllAndOverride&lt;boolean&gt;(IS_PUBLIC_KEY, [
         context.getHandler(),
         context.getClass(),
@@ -349,6 +350,7 @@
   
       const request &#x3D; context.switchToHttp().getRequest();
       const token &#x3D; this.extractTokenFromHeader(request);
+     //console.log(token)
       if (!token) {
         throw new UnauthorizedException();
       }
@@ -369,6 +371,7 @@
     }
   
     private extractTokenFromHeader(request: Request): string | undefined {
+      
       const [type, token] &#x3D; request.headers.authorization?.split(&#x27; &#x27;) ?? [];
       return type &#x3D;&#x3D;&#x3D; &#x27;Bearer&#x27; ? token : undefined;
     }

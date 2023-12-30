@@ -94,6 +94,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#EditSelf" >EditSelf</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#EditUserForMGTMT" >EditUserForMGTMT</a>
                             </li>
                             <li>
@@ -111,6 +115,18 @@
                             <li>
                                     <span class="modifier">Async</span>
                                 <a href="#findByRegion" >findByRegion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findFiszkiForDateByUser" >findFiszkiForDateByUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findFiszkiForDateInInterview" >findFiszkiForDateInInterview</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findFiszkiForDateInRegion" >findFiszkiForDateInRegion</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
@@ -138,12 +154,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(prisma: <a href="../injectables/PrismaService.html" target="_self">PrismaService</a>)</code>
+<code>constructor(prisma: PrismaService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/models/user/user.service.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/models/user/user.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -164,7 +180,7 @@
                                                         <td>prisma</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/PrismaService.html" target="_self" >PrismaService</a></code>
+                                                                    <code>PrismaService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -208,8 +224,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="119"
-                            class="link-to-prism">src/models/user/user.service.ts:119</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="217"
+                            class="link-to-prism">src/models/user/user.service.ts:217</a></div>
                 </td>
             </tr>
 
@@ -247,7 +263,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserDto.html" target="_self" >Promise&lt;GetUserDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -279,8 +295,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="89"
-                            class="link-to-prism">src/models/user/user.service.ts:89</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">src/models/user/user.service.ts:96</a></div>
                 </td>
             </tr>
 
@@ -330,7 +346,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserDto.html" target="_self" >Promise&lt;GetUserDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -344,26 +360,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="EditUserForMGTMT"></a>
+                    <a name="EditSelf"></a>
                     <span class="name">
                         <span class="modifier">Async</span>
-                        <span ><b>EditUserForMGTMT</b></span>
-                        <a href="#EditUserForMGTMT"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>EditSelf</b></span>
+                        <a href="#EditSelf"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>EditUserForMGTMT(editUserForRdDto: <a href="../classes/CreateUserForMGTMTDto.html" target="_self">CreateUserForMGTMTDto</a>, Id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>EditSelf(editSelfDto: <a href="../classes/EditSelfDto.html" target="_self">EditSelfDto</a>, Id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="156"
-                            class="link-to-prism">src/models/user/user.service.ts:156</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="264"
+                            class="link-to-prism">src/models/user/user.service.ts:264</a></div>
                 </td>
             </tr>
 
@@ -384,9 +400,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>editUserForRdDto</td>
+                                    <td>editSelfDto</td>
                                     <td>
-                                                <code><a href="../classes/CreateUserForMGTMTDto.html" target="_self" >CreateUserForMGTMTDto</a></code>
+                                                <code><a href="../classes/EditSelfDto.html" target="_self" >EditSelfDto</a></code>
                                     </td>
 
                                     <td>
@@ -413,7 +429,90 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/EditSelfDto.html" target="_self" >Promise&lt;EditSelfDto&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="EditUserForMGTMT"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>EditUserForMGTMT</b></span>
+                        <a href="#EditUserForMGTMT"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>EditUserForMGTMT(editUserForMGTMTDto: <a href="../classes/EditUserForMGTMTDto.html" target="_self">EditUserForMGTMTDto</a>, Id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="255"
+                            class="link-to-prism">src/models/user/user.service.ts:255</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>editUserForMGTMTDto</td>
+                                    <td>
+                                                <code><a href="../classes/EditUserForMGTMTDto.html" target="_self" >EditUserForMGTMTDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>Id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/EditUserForMGTMTDto.html" target="_self" >Promise&lt;EditUserForMGTMTDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -445,8 +544,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="137"
-                            class="link-to-prism">src/models/user/user.service.ts:137</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="235"
+                            class="link-to-prism">src/models/user/user.service.ts:235</a></div>
                 </td>
             </tr>
 
@@ -520,7 +619,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/EditUserForRdDto.html" target="_self" >Promise&lt;EditUserForRdDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -552,8 +651,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="17"
-                            class="link-to-prism">src/models/user/user.service.ts:17</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/models/user/user.service.ts:19</a></div>
                 </td>
             </tr>
 
@@ -562,7 +661,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserDto.html" target="_self" >Promise&lt;GetUserDto[]&gt;</a></code>
 
                     </div>
                 </td>
@@ -591,8 +690,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="60"
-                            class="link-to-prism">src/models/user/user.service.ts:60</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/models/user/user.service.ts:66</a></div>
                 </td>
             </tr>
 
@@ -642,7 +741,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserDto.html" target="_self" >Promise&lt;GetUserDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -674,8 +773,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/models/user/user.service.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/models/user/user.service.ts:38</a></div>
                 </td>
             </tr>
 
@@ -725,6 +824,267 @@
                     <div>
                     </div>
                     <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/GetUserDto.html" target="_self" >Promise&lt;GetUserDto[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findFiszkiForDateByUser"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>findFiszkiForDateByUser</b></span>
+                        <a href="#findFiszkiForDateByUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findFiszkiForDateByUser(userId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, Date: <a href="../classes/GraphDateDto.html" target="_self">GraphDateDto</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="126"
+                            class="link-to-prism">src/models/user/user.service.ts:126</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>userId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>Date</td>
+                                    <td>
+                                                <code><a href="../classes/GraphDateDto.html" target="_self" >GraphDateDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;getGraphDateDto[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findFiszkiForDateInInterview"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>findFiszkiForDateInInterview</b></span>
+                        <a href="#findFiszkiForDateInInterview"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findFiszkiForDateInInterview(schoolId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, Date: <a href="../classes/GraphDateDto.html" target="_self">GraphDateDto</a>, region: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="156"
+                            class="link-to-prism">src/models/user/user.service.ts:156</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>schoolId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>Date</td>
+                                    <td>
+                                                <code><a href="../classes/GraphDateDto.html" target="_self" >GraphDateDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>region</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findFiszkiForDateInRegion"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>findFiszkiForDateInRegion</b></span>
+                        <a href="#findFiszkiForDateInRegion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findFiszkiForDateInRegion(region: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, Date: <a href="../classes/GraphDateDto.html" target="_self">GraphDateDto</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="185"
+                            class="link-to-prism">src/models/user/user.service.ts:185</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>region</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>Date</td>
+                                    <td>
+                                                <code><a href="../classes/GraphDateDto.html" target="_self" >GraphDateDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
                         <b>Returns : </b>    <code>unknown</code>
 
                     </div>
@@ -757,8 +1117,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="107"
-                            class="link-to-prism">src/models/user/user.service.ts:107</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/models/user/user.service.ts:113</a></div>
                 </td>
             </tr>
 
@@ -796,7 +1156,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>    <code>Promise&lt;number&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -828,8 +1188,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="166"
-                            class="link-to-prism">src/models/user/user.service.ts:166</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="273"
+                            class="link-to-prism">src/models/user/user.service.ts:273</a></div>
                 </td>
             </tr>
 
@@ -867,7 +1227,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>    <code>Promise&lt;literal type&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -886,11 +1246,14 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
 import { PrismaService } from &#x27;../../../prisma/prisma.service&#x27;
 import { CreateUserForMGTMTDto, CreateUserForRdDto } from &#x27;./dto/createUser.dto&#x27;;
-import { EditUserForRdDto } from &#x27;./dto/editUser.dto&#x27;;
+import { EditSelfDto, EditUserForMGTMTDto, EditUserForRdDto } from &#x27;./dto/editUser.dto&#x27;;
 import { HashPassword } from &#x27;./../../common/helpers/hashPass&#x27;;
 import { Role } from &#x27;@prisma/client&#x27;;
-import { RoleValue } from &#x27;src/common/helpers/roleValue&#x27;;
 import { ValidationdDto } from &#x27;./dto/validation.dto&#x27;;
+import { GetUserDto } from &#x27;./dto/GetUser.dto&#x27;;
+import { RoleValue } from &#x27;./../../common/helpers/roleValue&#x27;;
+import { GraphDateDto } from &#x27;./dto/GraphDate.dto&#x27;;
+import { getGraphDateDto } from &#x27;./dto/getGraphDate.dto&#x27;;
 
 
 //@Injectable({ scope: Scope.REQUEST })
@@ -898,8 +1261,7 @@ import { ValidationdDto } from &#x27;./dto/validation.dto&#x27;;
 export class UserService {
   constructor(private prisma: PrismaService) { }
 
-
-  async findAll() {
+  async findAll(): Promise&lt;GetUserDto[]&gt; {
     return this.prisma.user.findMany({
       select: {
         name: true,
@@ -911,19 +1273,20 @@ export class UserService {
         job: true,
         active: true,
         totalFiszki: true,
-        id: true
+        id: true,
+        isFirstLogin: true
       }
     });
 
   }
 
-  async findByRegion(Region: string, Role?: Role) {
+  async findByRegion(Region: string, Role?: Role): Promise&lt;GetUserDto[]&gt; {
     const role &#x3D; await RoleValue(Role)
     const roles &#x3D; role?.map(role &#x3D;&gt; role.toString() as Role);
 
     return this.prisma.user.findMany({
       where: {
-        region: Region,
+        region: Region.toUpperCase(),
         role: {
           in: roles
         }
@@ -937,12 +1300,15 @@ export class UserService {
         job: true,
         active: true,
         totalFiszki: true,
+        isFirstLogin: true,
         id: true
       }
     });
+
+
   }
 
-  async findById(Id: string, region?: string) {
+  async findById(Id: string, region?: string): Promise&lt;GetUserDto&gt; {
 
 
     const user &#x3D; this.prisma.user.findUniqueOrThrow(
@@ -963,7 +1329,8 @@ export class UserService {
           job: true,
           active: true,
           totalFiszki: true,
-          id: true
+          id: true,
+          isFirstLogin: true
         }
       }
     );
@@ -971,13 +1338,12 @@ export class UserService {
   }
 
 
-  async CreateUserForRd(User: CreateUserForRdDto, region: string) {
-
+  async CreateUserForRd(User: CreateUserForRdDto, region: string): Promise&lt;GetUserDto&gt; {
 
     const user &#x3D; this.prisma.user.create({
       data: {
         name: User.name,
-        password: await HashPassword(User.name + &quot;.&quot; + User.surname),
+        password: await HashPassword(&#x60;${User.name[0].toUpperCase()}${User.surname[0].toLowerCase()}${User.phone.substring(0, 8)}&#x60;),
         surname: User.surname,
         email: User.email,
         phone: User.phone,
@@ -989,7 +1355,7 @@ export class UserService {
     })
     return user
   }
-  async findTotalById(id: string) {
+  async findTotalById(id: string): Promise&lt;number&gt; {
     const user &#x3D; await this.prisma.user.findUniqueOrThrow({
       where: {
         id: id
@@ -1001,12 +1367,104 @@ export class UserService {
     })
     return user.fiszka.length
   }
-  async CreateUserForMGTMT(User: CreateUserForMGTMTDto) {
+
+  async findFiszkiForDateByUser(userId: string, Date: GraphDateDto):Promise&lt;getGraphDateDto[]&gt; {
+
+
+    const FiszkaPerDay &#x3D; this.prisma.interviews.findMany({
+      where: {
+        userInterviews: {
+          some: {
+            userId: userId
+          }
+        },
+        date: {
+          gte: Date.startDate,
+          lte: Date.endDate
+        }
+      },
+      select: {
+        date: true,
+        _count: {
+          select: {
+            fiszki: true
+          }
+        }
+      }
+    })
+    const mappedArray &#x3D; (await FiszkaPerDay).map(item &#x3D;&gt; {
+      return { date: item.date, count: item._count.fiszki };
+  });
+    console.log(mappedArray)
+    return (mappedArray)
+  }
+  async findFiszkiForDateInInterview(schoolId: string, Date: GraphDateDto, region: string) {
+
+
+    const InterviewPerDay &#x3D; this.prisma.interviews.findMany({
+      where: {
+        school: {
+          id: schoolId,
+          region: region
+        },
+        date: {
+          gte: Date.startDate,
+          lte: Date.endDate
+        }
+      },
+      select: {
+        date: true,
+        _count: {
+          select: {
+            fiszki: true
+          }
+        }
+      }
+    })
+    const mappedArray &#x3D; (await InterviewPerDay).map(item &#x3D;&gt; {
+      return { date: item.date, count: item._count.fiszki };
+  });
+    console.log(await mappedArray)
+    return (mappedArray)
+  }
+  async findFiszkiForDateInRegion(region: string, Date: GraphDateDto) {
+
+
+    const response &#x3D; this.prisma.school.findMany({
+      where:{
+        region:region,
+        interviews:{
+          some:{
+            date: {
+              gte: Date.startDate,
+              lte: Date.endDate
+            }
+          }
+        }
+      },
+      select: {
+        name: true,
+        interviews:{
+          select:{
+            interviewTotalFiszki:true
+          }
+        }
+      }
+    });
+    const schoolNameAndTotalFiszki &#x3D; (await response).map(school &#x3D;&gt; ({
+      name: school.name,
+      totalFiszki: school.interviews.reduce((sum, interview) &#x3D;&gt; sum + interview.interviewTotalFiszki, 0)
+    }));
+  
+    return (schoolNameAndTotalFiszki)
+  }
+ 
+  async CreateUserForMGTMT(User: CreateUserForMGTMTDto): Promise&lt;GetUserDto&gt; {
 
     const user &#x3D; this.prisma.user.create({
       data: {
         name: User.name,
-        password: await HashPassword(User.name + &quot;.&quot; + User.surname),
+        password: await HashPassword(&#x60;${User.name[0].toUpperCase()}${User.surname[0].toLowerCase()}${User.phone.substring(0, 8)}&#x60;),
         surname: User.surname,
         email: User.email,
         phone: User.phone,
@@ -1019,10 +1477,11 @@ export class UserService {
     return user
   }
 
-  async EditUserForRd(editUserForRdDto: EditUserForRdDto, Id: string, region: string, Role: Role) {
+  async EditUserForRd(editUserForRdDto: EditUserForRdDto, Id: string, region: string, Role: Role): Promise&lt;EditUserForRdDto&gt; {
     const role &#x3D; await RoleValue(Role)
     const roles &#x3D; role?.map(role &#x3D;&gt; role.toString() as Role);
-    const user &#x3D; this.prisma.user.updateMany(
+    //zmienione z updatemany -do tesu
+    const user &#x3D; this.prisma.user.update(
       {
         where: {
           id: Id,
@@ -1038,17 +1497,25 @@ export class UserService {
 
   }
 
-  async EditUserForMGTMT(editUserForRdDto: CreateUserForMGTMTDto, Id: string) {
+  async EditUserForMGTMT(editUserForMGTMTDto: EditUserForMGTMTDto, Id: string): Promise&lt;EditUserForMGTMTDto&gt; {
 
     return this.prisma.user.update({
       where: {
         id: Id
       },
-      data: editUserForRdDto,
+      data: editUserForMGTMTDto,
     });
   }
+  async EditSelf(editSelfDto: EditSelfDto, Id: string): Promise&lt;EditSelfDto&gt; {
 
-  async Validation(ValidationUserDto: ValidationdDto) {
+    return this.prisma.user.update({
+      where: {
+        id: Id
+      },
+      data: editSelfDto,
+    });
+  }
+  async Validation(ValidationUserDto: ValidationdDto): Promise&lt;{ InDatabase: boolean }&gt; {
     if (ValidationUserDto.email !&#x3D;&#x3D; undefined) {
       const user &#x3D; await this.prisma.user.findUnique({
         where: {

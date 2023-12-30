@@ -98,6 +98,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#findAllByRegion" >findAllByRegion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#findAllBySchool" >findAllBySchool</a>
                             </li>
                             <li>
@@ -106,11 +110,19 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#findById" >findById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#findByUser" >findByUser</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
                                 <a href="#findMyBySchool" >findMyBySchool</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#RefreshTotalFiszki" >RefreshTotalFiszki</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
@@ -134,12 +146,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(prisma: <a href="../injectables/PrismaService.html" target="_self">PrismaService</a>)</code>
+<code>constructor(prisma: PrismaService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/models/interviews/interviews.service.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/models/interviews/interviews.service.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -160,7 +172,7 @@
                                                         <td>prisma</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/PrismaService.html" target="_self" >PrismaService</a></code>
+                                                                    <code>PrismaService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -204,8 +216,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="104"
-                            class="link-to-prism">src/models/interviews/interviews.service.ts:104</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="198"
+                            class="link-to-prism">src/models/interviews/interviews.service.ts:198</a></div>
                 </td>
             </tr>
 
@@ -255,7 +267,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserInterViewDto.html" target="_self" >Promise&lt;ForbiddenException | GetUserInterViewDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -287,8 +299,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="159"
-                            class="link-to-prism">src/models/interviews/interviews.service.ts:159</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="285"
+                            class="link-to-prism">src/models/interviews/interviews.service.ts:285</a></div>
                 </td>
             </tr>
 
@@ -358,8 +370,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="92"
-                            class="link-to-prism">src/models/interviews/interviews.service.ts:92</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="160"
+                            class="link-to-prism">src/models/interviews/interviews.service.ts:160</a></div>
                 </td>
             </tr>
 
@@ -409,7 +421,78 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findAllByRegion"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>findAllByRegion</b></span>
+                        <a href="#findAllByRegion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findAllByRegion(region: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">src/models/interviews/interviews.service.ts:110</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>region</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/GetInterViewsDto.html" target="_self" >Promise&lt;GetInterViewsDto[]&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -441,8 +524,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="56"
-                            class="link-to-prism">src/models/interviews/interviews.service.ts:56</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/models/interviews/interviews.service.ts:82</a></div>
                 </td>
             </tr>
 
@@ -480,7 +563,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserInterViewDto.html" target="_self" >Promise&lt;GetUserInterViewDto[]&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -512,8 +595,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/models/interviews/interviews.service.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/models/interviews/interviews.service.ts:17</a></div>
                 </td>
             </tr>
 
@@ -551,7 +634,90 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserInterViewDto.html" target="_self" >Promise&lt;GetUserInterViewDto[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findById"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>findById</b></span>
+                        <a href="#findById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findById(region: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, IdInterview: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/models/interviews/interviews.service.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>region</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>IdInterview</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/GetFindByIdDto.html" target="_self" >Promise&lt;GetFindByIdDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -583,8 +749,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="73"
-                            class="link-to-prism">src/models/interviews/interviews.service.ts:73</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="141"
+                            class="link-to-prism">src/models/interviews/interviews.service.ts:141</a></div>
                 </td>
             </tr>
 
@@ -622,7 +788,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserInterViewDto.html" target="_self" >Promise&lt;GetUserInterViewDto[]&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -654,8 +820,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/models/interviews/interviews.service.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/models/interviews/interviews.service.ts:41</a></div>
                 </td>
             </tr>
 
@@ -705,11 +871,50 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetUserInterViewDto.html" target="_self" >Promise&lt;GetUserInterViewDto[]&gt;</a></code>
 
                     </div>
                     <div class="io-description">
                         
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="RefreshTotalFiszki"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>RefreshTotalFiszki</b></span>
+                        <a href="#RefreshTotalFiszki"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>RefreshTotalFiszki()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="263"
+                            class="link-to-prism">src/models/interviews/interviews.service.ts:263</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
                     </div>
                 </td>
             </tr>
@@ -737,8 +942,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="131"
-                            class="link-to-prism">src/models/interviews/interviews.service.ts:131</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="236"
+                            class="link-to-prism">src/models/interviews/interviews.service.ts:236</a></div>
                 </td>
             </tr>
 
@@ -788,7 +993,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -810,6 +1015,9 @@ import { EditInterViewDto } from &#x27;./dto/editInterView.dto&#x27;;
 import { AddUserInterViewDto } from &#x27;./dto/addUserInterView.dto&#x27;;
 import { CreateInterViewDto } from &#x27;./dto/createInterView.dto&#x27;;
 import { RemoveUserInterViewDto } from &#x27;./dto/removeUserInterview.dto&#x27;;
+import { GetUserInterViewDto } from &#x27;./dto/getUserInterView.dto&#x27;;
+import { GetInterViewsDto } from &#x27;./dto/GetInterViews.dto&#x27;;
+import { GetFindByIdDto } from &#x27;./dto/getFindById.dto&#x27;;
 
 
 @Injectable()
@@ -817,33 +1025,41 @@ export class InterviewsService {
     constructor(private prisma: PrismaService) { }
 
 
-    async findAllByUser(idUser: string) {
+    async findAllByUser(idUser: string): Promise&lt;GetUserInterViewDto[]&gt; {
         return this.prisma.interviews.findMany({
+
             where: {
-                fiszki: {
-                    id: idUser
+                userInterviews: {
+                    some: {
+                        userId: idUser
+                    }
                 }
             },
+
             select: {
+                userInterviews: true,
                 id: true,
                 classNumber: true,
                 termsNumber: true,
                 date: true
+
             }
         })
     }
 
 
 
-    async findMyBySchool(IdSchool: string, idUser:string) {
+    async findMyBySchool(IdSchool: string, idUser: string): Promise&lt;GetUserInterViewDto[]&gt; {
 
         const interviews &#x3D; this.prisma.interviews.findMany({
             where: {
                 school: {
                     id: IdSchool
                 },
-                fiszki: {
-                    id: idUser
+                userInterviews: {
+                    some: {
+                        userId: idUser
+                    }
                 }
             },
             select: {
@@ -858,11 +1074,88 @@ export class InterviewsService {
 
     }
 
-    async findAllBySchool(IdSchool: string) {
+    async findById(region: string, IdInterview: string): Promise&lt;GetFindByIdDto&gt; {
+        return this.prisma.interviews.findUnique({
+            where: {
+                id: IdInterview,
+                school: {
+                    region: region
+                }
+            },
+            include: {
+                fiszki: true,
+                school: true
+            },
+
+        })
+    }
+
+    async findAllBySchool(IdSchool: string): Promise&lt;GetUserInterViewDto[]&gt; {
         return this.prisma.interviews.findMany({
             where: {
                 school: {
                     id: IdSchool
+                }
+            },
+            select: {
+                id: true,
+                interviewTotalFiszki: true,
+                classNumber: true,
+                termsNumber: true,
+                date: true,
+
+                fiszki: {
+                    select: {
+                        id: true,
+                        name: true,
+                        surname: true,
+                        classDigit: true,
+                        classLetter: true,
+                        phone: true,
+                        email: true
+                    }
+                }
+            }
+        })
+    }
+    async findAllByRegion(region: string): Promise&lt;GetInterViewsDto[]&gt; {
+        const interviews &#x3D; this.prisma.interviews.findMany({
+            where: {
+                school: {
+                    region: region
+                }
+            },
+            include: {
+                school: {
+                    select: {
+                        id: true,
+                        name: true
+                    }
+                },
+                userInterviews: {
+                    select: {
+                        user: {
+                            select: {
+                                id: true,
+                                name: true,
+                                surname: true
+                            }
+                        }
+                    }
+                }
+            }
+        })
+
+
+        return interviews
+    }
+    async findByUser(IdUser: string): Promise&lt;GetUserInterViewDto[]&gt; {
+        return this.prisma.interviews.findMany({
+            where: {
+                userInterviews: {
+                    some: {
+                        userId: IdUser
+                    }
                 }
             },
             select: {
@@ -875,94 +1168,133 @@ export class InterviewsService {
         })
     }
 
-    async findByUser(IdUser:string) {
-        return this.prisma.interviews.findMany({
-            where: {
-              userInterviews:{
-                some:{
-                    userId: IdUser
-                }
-              }
-              },
-            select: {
-                id: true,
-                interviewTotalFiszki: true,
-                classNumber: true,
-                termsNumber: true,
-                date: true
-            }
-        })
-    }
+    async editInterview(IdInterView: string, Data: EditInterViewDto): Promise&lt;any&gt; {
 
-    async editInterview(IdInterView: string, Data: EditInterViewDto) {
-        const InterView &#x3D; this.prisma.interviews.update(
+        const InterView &#x3D; await this.prisma.interviews.update(
             {
                 where: {
                     id: IdInterView
                 },
-                data: Data
+
+                data: {
+                    classNumber: Data.classNumber,
+                    termsNumber: Data.termsNumber,
+                    date: Data.date,
+                    userInterviews: {
+                        deleteMany: {}
+                    }
+                },
+                include: {
+                    userInterviews: true
+                }
             }
         );
-        return InterView
+
+        const interviewUserCreateData &#x3D; Data.userInterviews.map(userData &#x3D;&gt; ({
+            userId: userData.id,
+            interviewId: IdInterView,
+        }));
+
+        const createdInterviewUsers &#x3D; await this.prisma.interviewUser.createMany({
+            data: interviewUserCreateData,
+            skipDuplicates: true
+        });
+
+        return createdInterviewUsers
+
+
     }
-    
-    async addUserToInterview(interviewId: string, data: AddUserInterViewDto) {
-        const ids &#x3D; data.idUserList;
+
+
+    async addUserToInterview(interviewId: string, data: AddUserInterViewDto): Promise&lt;ForbiddenException | GetUserInterViewDto&gt; {
+
         const interview &#x3D; await this.prisma.interviews.findUnique({
             where: { id: interviewId },
             include: { userInterviews: true },
-          });
-          
-          if (!interview) {
-            return new ForbiddenException(&#x60;Interview(id:${interviewId}) not found&#x60;)
-          }
-          
-          const existingUserIds &#x3D; interview.userInterviews.map((ui) &#x3D;&gt; ui.userId);
-          const newUserIds &#x3D; ids.filter((id) &#x3D;&gt; !existingUserIds.includes(id));
-          const AddUserIds &#x3D; newUserIds.filter((id) &#x3D;&gt; existingUserIds.includes(id));
-          if (AddUserIds.length &#x3D;&#x3D;&#x3D; 0) {
-            return new ForbiddenException(&#x60;One or more Id not found&#x60;)
-
-        }
-          const userInterviews &#x3D; newUserIds.map((userId) &#x3D;&gt; ({
-            userId,
-            interviewId,
-          }));
-        
-          return this.prisma.interviewUser.createMany({
-            data: userInterviews,
-          });
-    }
-    async removeUserFromInterview(interviewId: string, data: RemoveUserInterViewDto) {
-        const userIds &#x3D; data.idUserList;
-  
-        const interview &#x3D; await this.prisma.interviews.findUnique({
-          where: { id: interviewId },
-          include: { userInterviews: true },
         });
- 
+
         if (!interview) {
             return new ForbiddenException(&#x60;Interview(id:${interviewId}) not found&#x60;)
         }
-        
+        const userExisting &#x3D; await this.prisma.user.findUniqueOrThrow({
+            where: {
+                id: data.idUser
+            }
+        })
+
+        const existingUserIds &#x3D; interview.userInterviews.map((ui) &#x3D;&gt; ui.userId);
+        const isUserIdInArray &#x3D; existingUserIds.includes(data.idUser);
+        if (!isUserIdInArray) {
+            return this.prisma.interviews.update({
+                where: {
+                    id: interviewId
+                },
+                data: {
+                    userInterviews: {
+                        create: {
+                            userId: data.idUser,
+
+                        }
+                    }
+                }
+            });
+        } else {
+            return new ForbiddenException(&#x60;UserId(id:${data.idUser}) it&#x27;s already in &#x60;)
+        }
+
+    }
+
+    async removeUserFromInterview(interviewId: string, data: RemoveUserInterViewDto): Promise&lt;any&gt; {
+        const userIds &#x3D; data.idUserList;
+
+        const interview &#x3D; await this.prisma.interviews.findUnique({
+            where: { id: interviewId },
+            include: { userInterviews: true },
+        });
+
+        if (!interview) {
+            return new ForbiddenException(&#x60;Interview(id:${interviewId}) not found&#x60;)
+        }
+
         const existingUserIds &#x3D; interview.userInterviews.map((ui) &#x3D;&gt; ui.userId);
         const userInterviewIds &#x3D; interview.userInterviews.map((ui) &#x3D;&gt; ui.id);
         const removedUserIds &#x3D; userIds.filter((id) &#x3D;&gt; existingUserIds.includes(id));
-        const removedUserInterviewIds &#x3D; userInterviewIds.filter((id, index) &#x3D;&gt; 
-        existingUserIds.includes(userInterviewIds[index]));
+        const removedUserInterviewIds &#x3D; userInterviewIds.filter((id, index) &#x3D;&gt;
+            existingUserIds.includes(userInterviewIds[index]));
 
         if (removedUserIds.length &#x3D;&#x3D;&#x3D; 0) {
             return new ForbiddenException(&#x60;One or more Id not found&#x60;)
 
         }
-        
+
         return this.prisma.interviewUser.deleteMany({
-          where: { id: { in: removedUserInterviewIds } },
+            where: { id: { in: removedUserInterviewIds } },
         });
+    }
+    async RefreshTotalFiszki() {
+        const interviews &#x3D; await this.prisma.interviews.findMany({
+            select: {
+                id: true,
+                _count: {
+                    select: {
+                        fiszki: true
+                    }
+                }
+            }
+        })
+        const updatePromises &#x3D; interviews.map((interview) &#x3D;&gt; {
+            return this.prisma.interviews.update({
+                where: { id: interview.id },
+                data: { interviewTotalFiszki: interview._count.fiszki }
+            });
+        });
+        await Promise.all(updatePromises);
+
+        return &#x27;Total Fiszki Refreshed&#x27;;
     }
 
     async CreateInterview(Data: CreateInterViewDto) {
-        const { classNumber, termsNumber, schoolId, users,date } &#x3D; Data;
+        const { classNumber, termsNumber, schoolId, users, date } &#x3D; Data;
         let interviewUsers &#x3D; [];
         if (users) {
             interviewUsers &#x3D; users.map(userId &#x3D;&gt; ({
@@ -972,13 +1304,13 @@ export class InterviewsService {
         return this.prisma.interviews.create({
             data: {
                 classNumber: classNumber,
-                termsNumber:termsNumber,
+                termsNumber: termsNumber,
                 userInterviews: {
                     create: interviewUsers
                 },
-                date: date? date : new Date(), // Nie sprawdzałem czy działa
-                school: { connect: { id:schoolId } },
-              }
+                date: date ? date : new Date(), // Nie sprawdzałem czy działa
+                school: { connect: { id: schoolId } },
+            }
         })
     }
 }

@@ -90,6 +90,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#delete" >delete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#edit" >edit</a>
                             </li>
                             <li>
@@ -118,12 +122,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(prisma: <a href="../injectables/PrismaService.html" target="_self">PrismaService</a>)</code>
+<code>constructor(prisma: PrismaService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/models/personContact/contactPerson.service.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/models/personContact/contactPerson.service.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -144,7 +148,7 @@
                                                         <td>prisma</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/PrismaService.html" target="_self" >PrismaService</a></code>
+                                                                    <code>PrismaService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -188,8 +192,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">src/models/personContact/contactPerson.service.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/models/personContact/contactPerson.service.ts:47</a></div>
                 </td>
             </tr>
 
@@ -251,7 +255,90 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/CreateContactPersontDto.html" target="_self" >Promise&lt;CreateContactPersontDto&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="delete"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>delete</b></span>
+                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>delete(idContactPerson: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, region: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/models/personContact/contactPerson.service.ts:93</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idContactPerson</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>region</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;ContactPerson&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -358,7 +445,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/EditContactPersontDto.html" target="_self" >Promise&lt;EditContactPersontDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -390,8 +477,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/models/personContact/contactPerson.service.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">src/models/personContact/contactPerson.service.ts:12</a></div>
                 </td>
             </tr>
 
@@ -429,7 +516,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetContactPersontDto.html" target="_self" >Promise&lt;GetContactPersontDto[]&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -461,8 +548,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/models/personContact/contactPerson.service.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/models/personContact/contactPerson.service.ts:27</a></div>
                 </td>
             </tr>
 
@@ -512,7 +599,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetContactPersontDto.html" target="_self" >Promise&lt;GetContactPersontDto[]&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -532,12 +619,14 @@
 import { PrismaService } from &#x27;prisma/prisma.service&#x27;;
 import { CreateContactPersontDto } from &#x27;./dto/createContactPerson.dto&#x27;;
 import { EditContactPersontDto } from &#x27;./dto/editContactPerson.dto&#x27;;
+import { GetContactPersontDto } from &#x27;./dto/getContactPerson.dto&#x27;;
+import { ContactPerson } from &#x27;@prisma/client&#x27;;
 
 @Injectable()
 export class ContactPersonService {
     constructor(private prisma: PrismaService) { }
 
-    async getByIdForMgtmt(idSchool: string) {
+    async getByIdForMgtmt(idSchool: string): Promise&lt;GetContactPersontDto[]&gt; {
         return this.prisma.contactPerson.findMany({
             where: {
                 schoolId: idSchool
@@ -552,27 +641,27 @@ export class ContactPersonService {
         })
     }
 
-    async getByIdForRd(idSchool: string, region: string) {
+    async getByIdForRd(idSchool: string, region: string): Promise&lt;GetContactPersontDto[]&gt; {
 
         return this.prisma.contactPerson.findMany({
-           where:{
-                school:{
-                    region:region,
-                    id:idSchool
-                }  
-           },
-              select:{
+            where: {
+                school: {
+                    region: region,
+                    id: idSchool
+                }
+            },
+            select: {
                 id: true,
                 name: true,
                 surname: true,
                 email: true,
                 phone: true
-              } 
+            }
         })
     }
 
 
-    async create(idSchool: string, region: string, body: CreateContactPersontDto) {
+    async create(idSchool: string, region: string, body: CreateContactPersontDto): Promise&lt;CreateContactPersontDto&gt; {
 
         return this.prisma.contactPerson.create({
             data: {
@@ -589,19 +678,18 @@ export class ContactPersonService {
                     }
                 }
             }
-
         })
 
     }
 
-    async edit(idContactPerson: string, schoolId: string, region: string, body: EditContactPersontDto) {
+    async edit(idContactPerson: string, schoolId: string, region: string, body: EditContactPersontDto):Promise&lt;EditContactPersontDto&gt; {
 
         const UpdateInSchool &#x3D; this.prisma.school.update({
             where: {
                 unique_school_region_id:
                 {
-                    region: region
-                    , id: schoolId
+                    region: region,
+                    id: schoolId
                 }
             },
             data: {
@@ -612,14 +700,25 @@ export class ContactPersonService {
                         },
                         data: body
                     }
-
+                }
             }
-        }
         })
-       
-       return (await UpdateInSchool.contactPerson()).find((x)&#x3D;&gt;x.id&#x3D;&#x3D;&#x3D;idContactPerson)
 
+        return (await UpdateInSchool.contactPerson()).find((x) &#x3D;&gt; x.id &#x3D;&#x3D;&#x3D; idContactPerson)
+    }
 
+    async delete(idContactPerson: string, region: string):Promise&lt;ContactPerson&gt;{
+
+        const DeleteContactPerson &#x3D; this.prisma.contactPerson.delete({
+            where:{
+                id:idContactPerson,
+                school:{
+                    region:region
+                }
+            }
+        })
+
+      return DeleteContactPerson
     }
 }
 </code></pre>

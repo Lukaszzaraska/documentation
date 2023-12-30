@@ -126,7 +126,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(prisma: <a href="../injectables/PrismaService.html" target="_self">PrismaService</a>)</code>
+<code>constructor(prisma: PrismaService)</code>
                     </td>
                 </tr>
                         <tr>
@@ -152,7 +152,7 @@
                                                         <td>prisma</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/PrismaService.html" target="_self" >PrismaService</a></code>
+                                                                    <code>PrismaService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -247,7 +247,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/CreateSchoolDto.html" target="_self" >Promise&lt;CreateSchoolDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -342,7 +342,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/EditSchoolDto.html" target="_self" >Promise&lt;EditSchoolDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -735,7 +735,7 @@ export class SchoolService {
         })
     }
 
-    async editSchool(schoolId: string, region: string, body: EditSchoolDto) {
+    async editSchool(schoolId: string, region: string, body: EditSchoolDto): Promise&lt;EditSchoolDto&gt; {
         return this.prisma.school.update({
             where: {
                 unique_school_region_id: { region: region, id: schoolId }
@@ -744,8 +744,8 @@ export class SchoolService {
         })
     }
 
-    async createSchool(region: string, body: CreateSchoolDto) {
-        return this.prisma.school.create({
+    async createSchool(region: string, body: CreateSchoolDto):Promise&lt;CreateSchoolDto&gt;{
+        let school &#x3D; this.prisma.school.create({
             data: {
                 name: body.name,
                 region: region,
@@ -763,6 +763,7 @@ export class SchoolService {
                 comments: body.comments
             }
         })
+        return school
     }
 }
 </code></pre>

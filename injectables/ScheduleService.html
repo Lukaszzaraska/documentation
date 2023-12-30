@@ -40,7 +40,7 @@
 
 <ol class="breadcrumb">
   <li class="breadcrumb-item">Injectables</li>
-  <li class="breadcrumb-item" >AuthService</li>
+  <li class="breadcrumb-item" >ScheduleService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,7 +64,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/Auth/auth.service.ts</code>
+            <code>src/models/schedule/schedule.service.ts</code>
         </p>
 
 
@@ -86,23 +86,19 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#ChangePassword" >ChangePassword</a>
+                                <a href="#create" >create</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#LogOut" >LogOut</a>
+                                <a href="#edit" >edit</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#Profile" >Profile</a>
+                                <a href="#findAll" >findAll</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#refreshToken" >refreshToken</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Async</span>
-                                <a href="#signIn" >signIn</a>
+                                <a href="#findById" >findById</a>
                             </li>
                         </ul>
                     </td>
@@ -122,12 +118,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(jwtService: JwtService, prisma: PrismaService)</code>
+<code>constructor(prisma: PrismaService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/Auth/auth.service.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/models/schedule/schedule.service.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -144,18 +140,6 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                                <tr>
-                                                        <td>jwtService</td>
-                                                  
-                                                        <td>
-                                                                    <code>JwtService</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
                                                 <tr>
                                                         <td>prisma</td>
                                                   
@@ -186,26 +170,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="ChangePassword"></a>
+                    <a name="create"></a>
                     <span class="name">
                         <span class="modifier">Async</span>
-                        <span ><b>ChangePassword</b></span>
-                        <a href="#ChangePassword"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>create</b></span>
+                        <a href="#create"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>ChangePassword(DataPass: <a href="../classes/ChangePasswordDto.html" target="_self">ChangePasswordDto</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>create(body: <a href="../classes/CreateScheduleDto.html" target="_self">CreateScheduleDto</a>, IdSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, region: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="116"
-                            class="link-to-prism">src/Auth/auth.service.ts:116</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">src/models/schedule/schedule.service.ts:12</a></div>
                 </td>
             </tr>
 
@@ -226,9 +210,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>DataPass</td>
+                                    <td>body</td>
                                     <td>
-                                                <code><a href="../classes/ChangePasswordDto.html" target="_self" >ChangePasswordDto</a></code>
+                                                <code><a href="../classes/CreateScheduleDto.html" target="_self" >CreateScheduleDto</a></code>
                                     </td>
 
                                     <td>
@@ -238,7 +222,19 @@
 
                                 </tr>
                                 <tr>
-                                    <td>id</td>
+                                    <td>IdSchool</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>region</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -255,7 +251,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/GetUserDto.html" target="_self" >Promise&lt;GetUserDto&gt;</a></code>
+                        <b>Returns : </b>    <code>unknown</code>
 
                     </div>
                     <div class="io-description">
@@ -269,65 +265,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="LogOut"></a>
+                    <a name="edit"></a>
                     <span class="name">
                         <span class="modifier">Async</span>
-                        <span ><b>LogOut</b></span>
-                        <a href="#LogOut"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>edit</b></span>
+                        <a href="#edit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>LogOut()</code>
+                    <code>edit(body: <a href="../classes/EditScheduleDto.html" target="_self">EditScheduleDto</a>, IdSchedule: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="68"
-                            class="link-to-prism">src/Auth/auth.service.ts:68</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="Profile"></a>
-                    <span class="name">
-                        <span class="modifier">Async</span>
-                        <span ><b>Profile</b></span>
-                        <a href="#Profile"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>Profile(email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="101"
-                            class="link-to-prism">src/Auth/auth.service.ts:101</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/models/schedule/schedule.service.ts:33</a></div>
                 </td>
             </tr>
 
@@ -348,7 +305,19 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>email</td>
+                                    <td>body</td>
+                                    <td>
+                                                <code><a href="../classes/EditScheduleDto.html" target="_self" >EditScheduleDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>IdSchedule</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -365,7 +334,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/GetUserDto.html" target="_self" >Promise&lt;GetUserDto&gt;</a></code>
+                        <b>Returns : </b>    <code>unknown</code>
 
                     </div>
                     <div class="io-description">
@@ -379,26 +348,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="refreshToken"></a>
+                    <a name="findAll"></a>
                     <span class="name">
                         <span class="modifier">Async</span>
-                        <span ><b>refreshToken</b></span>
-                        <a href="#refreshToken"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>findAll</b></span>
+                        <a href="#findAll"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>refreshToken(refreshToken: <a href="../classes/AccessTokenDto.html" target="_self">AccessTokenDto</a>)</code>
+                    <code>findAll(region: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, IdSchool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/Auth/auth.service.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/models/schedule/schedule.service.ts:48</a></div>
                 </td>
             </tr>
 
@@ -419,9 +388,21 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>refreshToken</td>
+                                    <td>region</td>
                                     <td>
-                                                <code><a href="../classes/AccessTokenDto.html" target="_self" >AccessTokenDto</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>IdSchool</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
 
                                     <td>
@@ -436,7 +417,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/AccessTokenDto.html" target="_self" >Promise&lt;AccessTokenDto&gt;</a></code>
+                        <b>Returns : </b>    <code>unknown</code>
 
                     </div>
                     <div class="io-description">
@@ -450,26 +431,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="signIn"></a>
+                    <a name="findById"></a>
                     <span class="name">
                         <span class="modifier">Async</span>
-                        <span ><b>signIn</b></span>
-                        <a href="#signIn"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>findById</b></span>
+                        <a href="#findById"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>signIn(email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, pass: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>findById(region: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, IdShedule: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="73"
-                            class="link-to-prism">src/Auth/auth.service.ts:73</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/models/schedule/schedule.service.ts:69</a></div>
                 </td>
             </tr>
 
@@ -490,7 +471,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>email</td>
+                                    <td>region</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -502,7 +483,7 @@
 
                                 </tr>
                                 <tr>
-                                    <td>pass</td>
+                                    <td>IdShedule</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -519,7 +500,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/AccessTokenDto.html" target="_self" >Promise&lt;AccessTokenDto&gt;</a></code>
+                        <b>Returns : </b>    <code>unknown</code>
 
                     </div>
                     <div class="io-description">
@@ -535,150 +516,100 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ForbiddenException, Injectable, UnauthorizedException } from &#x27;@nestjs/common&#x27;;
-import { JwtService } from &#x27;@nestjs/jwt&#x27;;
-import { PrismaService } from &quot;./../../prisma/prisma.service&quot;;
-import * as bcrypt from &#x27;bcrypt&#x27;;
-import * as jwt from &#x27;jsonwebtoken&#x27;;
-import { DecodeDto } from &#x27;./dto/decode.dto&#x27;;
-import { GetUserDto } from &#x27;src/models/user/dto/GetUser.dto&#x27;;
-import { ChangePasswordDto } from &#x27;./dto/changePassword.dto&#x27;;
-import { HashPassword } from &#x27;./../../src/common/helpers/hashPass&#x27;;
-import { User } from &#x27;@prisma/client&#x27;;
-import { AccessTokenDto } from &#x27;./dto/authRefreshToken.dto&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpException, HttpStatus, Injectable } from &#x27;@nestjs/common&#x27;;
+import { PrismaService } from &#x27;prisma/prisma.service&#x27;;
+import { EditScheduleDto } from &#x27;./dto/editSchedule.dto&#x27;;
+import { CreateScheduleDto } from &#x27;./dto/createSchedule.dto&#x27;;
+
 
 @Injectable()
-export class AuthService {
-  constructor(
-    private jwtService: JwtService,
-    private prisma: PrismaService
-  ) { }
+export class ScheduleService {
+    constructor(private prisma: PrismaService) { }
 
-  async refreshToken(refreshToken: AccessTokenDto): Promise&lt;AccessTokenDto&gt; {
-    try {
-      const decoded &#x3D; await this.jwtService.verify(refreshToken.access_token);
-      const user &#x3D; await this.prisma.user.findUniqueOrThrow({
-        where: {
-          email: decoded.email,
-        },
-      });
-      const payload &#x3D; { email: user.email, role: user.role, region: user.region, id: user.id };
-      console.log(&quot;Token byl aktywny ale dałem refresh&quot;);
+    async create(body: CreateScheduleDto, IdSchool: string, region: string) {
+        return this.prisma.schedule.create({
+            data: {
+                classDigit: body.classDigit,
+                classLetter: body.classLetter,
+                date: body.date,
+               
 
-      return {
-        access_token: await this.jwtService.signAsync(payload),
-      };
-    } catch (error) {
-      if (error instanceof jwt.TokenExpiredError) {
-        console.log(&quot;stary token &quot;, refreshToken.access_token);
+                school: {
+                    connect: {
+                        unique_school_region_id: {
+                            id: IdSchool,
+                            region: region
+                        }
+                    }
+                }
+            }
 
-        const decoded &#x3D; this.jwtService.decode(refreshToken.access_token);
-        let decodedData: DecodeDto;
-        console.log(&quot;before if&quot;, decoded)
-        if (typeof decoded &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
-          decodedData &#x3D; JSON.parse(decoded) as DecodeDto;
-        } else {
-          decodedData &#x3D; decoded as DecodeDto;
+        })
+    }
+
+    async edit(body: EditScheduleDto, IdSchedule: string) {
+        return this.prisma.schedule.update({
+            where: {
+               id:IdSchedule,
+               
+            },
+            data:{
+                classDigit:body.classDigit,
+                classLetter:body.classLetter,
+                date:body.date,
+            }
+            }
+        )
+    }
+
+    async findAll(region: string, IdSchool: string) {
+        const schedule &#x3D; this.prisma.schedule.findMany({
+            where: {
+                school: {
+                    region: region,
+                    id: IdSchool
+                }
+            },
+            select: {
+                id: true,
+                scheduleDays: true,
+                classDigit: true,
+                classLetter: true,
+                date: true
+            }
+        })
+        if((await schedule).length&#x3D;&#x3D;&#x3D;0){
+            throw new HttpException(&quot;Not found data with this ID&quot;,HttpStatus.NOT_FOUND)
         }
-        console.log(&quot;stary token &quot;, decodedData);
-
-        const user &#x3D; await this.prisma.user.findUniqueOrThrow({
-          where: {
-            email: decodedData.email,
-          },
+        return schedule
+    }
+    async findById(region: string, IdShedule: string){
+        return this.prisma.school.findFirst({
+            where: {
+                region: region,
+                schedule: {
+                    some: {
+                        id: IdShedule
+                    }
+                }
+            },
+            select: {
+                schedule: {
+                    select: {
+                        id: true,
+                        scheduleDays: true,
+                        classDigit: true,
+                        classLetter: true,
+                        date: true
+                    }
+                }
+            }
         });
-        console.log(&quot;User wyszukany po starym tokenie&quot;, user);
-
-        const payload &#x3D; { email: user.email, role: user.role, region: user.region, id: user.id };
-        // console.log(&quot;końcowy payload&quot;,payload);
-        // let test &#x3D; await this.jwtService.signAsync(payload)
-        // console.log(test)
-        // let testponowymtokenie &#x3D; await this.jwtService.verify(test)
-        // console.log(&quot;test nowego tokena&quot;,testponowymtokenie)
-        return {
-          access_token: await this.jwtService.signAsync(payload)
-        };
-      }
-      throw new UnauthorizedException(&#x27;Invalid or expired refresh token&#x27;);
     }
-  }
-  async LogOut(): Promise&lt;void&gt; {
-    const expiresIn &#x3D; &#x27;1s&#x27;;
-    (await this.jwtService.signAsync({}, { expiresIn }));
-  }
-
-  async signIn(email: string, pass: string): Promise&lt;AccessTokenDto&gt; {
-
-    let user: User
-    try {
-      user &#x3D; await this.prisma.user.findUniqueOrThrow(
-        {
-          where: {
-            email: email
-          }
-        }
-      );
-      const match &#x3D; await bcrypt.compare(pass, user.password);
-      if (!match) {
-        throw new UnauthorizedException(&quot;Not correct password&quot;);
-      }
-    } catch {
-      throw new UnauthorizedException(&quot;Not correct email or password&quot;);
-    }
-
-    console.log(user)
+}
 
 
-    const payload &#x3D; { email: user.email, role: user.role, region: user.region, id: user.id };
-    return {
-      access_token: await this.jwtService.signAsync(payload),
-    };
-
-  }
-  async Profile(email: string): Promise&lt;GetUserDto&gt; {
-
-    const user &#x3D; await this.prisma.user.findUniqueOrThrow(
-      {
-        where: {
-          email: email
-        }
-      }
-    );
-    if (!user) {
-      throw new UnauthorizedException(&quot;Not correct email&quot;);
-    }
-    return user
-  }
-
-  async ChangePassword(DataPass: ChangePasswordDto, id: string): Promise&lt;GetUserDto&gt; {
-    
-      const MatchOldPass &#x3D; await this.prisma.user.findUniqueOrThrow({
-        where: {
-          id: id
-        }
-      })
-      if (!MatchOldPass) {
-        throw new UnauthorizedException(&#x27;Błąd autoryzacji użytkownika.&#x27;);
-      }
-      const isMatch &#x3D; await bcrypt.compare(DataPass.OldPassword, MatchOldPass.password);
-    
-      if (!isMatch) {
-        throw new UnauthorizedException(&#x27;Niepoprawne stare hasło.&#x27;);
-      }
-
-    return this.prisma.user.update({
-      where: {
-        id: id,
-      },
-      data: {
-        password: await HashPassword(DataPass.NewPassword),
-        isFirstLogin: false
-      }
-    })
-
-
-  }
-}</code></pre>
+</code></pre>
     </div>
 
 </div>
@@ -721,7 +652,7 @@ export class AuthService {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'AuthService.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ScheduleService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

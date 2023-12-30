@@ -118,7 +118,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(prisma: <a href="../injectables/PrismaService.html" target="_self">PrismaService</a>)</code>
+<code>constructor(prisma: PrismaService)</code>
                     </td>
                 </tr>
                         <tr>
@@ -144,7 +144,7 @@
                                                         <td>prisma</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/PrismaService.html" target="_self" >PrismaService</a></code>
+                                                                    <code>PrismaService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -251,7 +251,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/CreateRentalCostDto.html" target="_self" >Promise&lt;CreateRentalCostDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -322,7 +322,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetRentalCostDto.html" target="_self" >Promise&lt;GetRentalCostDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -405,7 +405,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetRentalCostDto.html" target="_self" >Promise&lt;GetRentalCostDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -500,7 +500,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/EditRentalCostDto.html" target="_self" >Promise&lt;EditRentalCostDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -520,12 +520,13 @@
 import { PrismaService } from &#x27;prisma/prisma.service&#x27;;
 import { CreateRentalCostDto } from &#x27;./dto/createRentalCost.dto&#x27;;
 import { EditRentalCostDto } from &#x27;./dto/editRentalCost.dto&#x27;;
+import { GetRentalCostDto } from &#x27;./dto/getRentalCost.dto&#x27;;
 
 @Injectable()
 export class RentalCostService {
     constructor(private prisma: PrismaService) { }
 
-    async getByIdForMgtmt(idSchool: string) {
+    async getByIdForMgtmt(idSchool: string): Promise&lt;GetRentalCostDto&gt; {
         return this.prisma.rentalCost.findUniqueOrThrow({
             where: { schoolId: idSchool },
             select: {
@@ -536,7 +537,7 @@ export class RentalCostService {
 
     }
 
-    async getByIdForRd(idSchool: string, region: string) {
+    async getByIdForRd(idSchool: string, region: string): Promise&lt;GetRentalCostDto&gt; {
         const Find &#x3D; this.prisma.school.findUniqueOrThrow({
             where: {
                 unique_school_region_id: {
@@ -557,7 +558,7 @@ export class RentalCostService {
         })
         return Find.rentalCost()
     }
-    async create(idSchool: string, body: CreateRentalCostDto, region: string) {
+    async create(idSchool: string, body: CreateRentalCostDto, region: string): Promise&lt;CreateRentalCostDto&gt; {
         return this.prisma.rentalCost.create({
             data: {
                 classroomHour: body.classroomHour,
@@ -574,7 +575,7 @@ export class RentalCostService {
 
         })
     }
-    async patch(idSchool: string, body: EditRentalCostDto, region: string) {
+    async patch(idSchool: string, body: EditRentalCostDto, region: string): Promise&lt;EditRentalCostDto&gt; {
         const UpdateInSchool &#x3D; this.prisma.school.update({
             where: {
                 unique_school_region_id: {

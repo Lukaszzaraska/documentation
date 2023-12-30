@@ -100,6 +100,14 @@
                                     <span class="modifier">Async</span>
                                 <a href="#getByIdForRD" >getByIdForRD</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getByIdGroupForMGTMT" >getByIdGroupForMGTMT</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getByIdGroupForRD" >getByIdGroupForRD</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -118,12 +126,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(prisma: <a href="../injectables/PrismaService.html" target="_self">PrismaService</a>)</code>
+<code>constructor(prisma: PrismaService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/models/group/group.service.ts:7</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/models/group/group.service.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -144,7 +152,7 @@
                                                         <td>prisma</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/PrismaService.html" target="_self" >PrismaService</a></code>
+                                                                    <code>PrismaService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -188,8 +196,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="50"
-                            class="link-to-prism">src/models/group/group.service.ts:50</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/models/group/group.service.ts:93</a></div>
                 </td>
             </tr>
 
@@ -251,7 +259,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/CreateGroupDto.html" target="_self" >Promise&lt;CreateGroupDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -283,8 +291,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="70"
-                            class="link-to-prism">src/models/group/group.service.ts:70</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/models/group/group.service.ts:113</a></div>
                 </td>
             </tr>
 
@@ -390,8 +398,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/models/group/group.service.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/models/group/group.service.ts:57</a></div>
                 </td>
             </tr>
 
@@ -429,7 +437,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetGroupDto.html" target="_self" >Promise&lt;GetGroupDto[]&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -461,8 +469,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="10"
-                            class="link-to-prism">src/models/group/group.service.ts:10</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="11"
+                            class="link-to-prism">src/models/group/group.service.ts:11</a></div>
                 </td>
             </tr>
 
@@ -512,7 +520,161 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetGroupDto.html" target="_self" >Promise&lt;GetGroupDto[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getByIdGroupForMGTMT"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getByIdGroupForMGTMT</b></span>
+                        <a href="#getByIdGroupForMGTMT"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getByIdGroupForMGTMT(idGroup: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/models/group/group.service.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idGroup</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/GetGroupDto.html" target="_self" >Promise&lt;GetGroupDto&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getByIdGroupForRD"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getByIdGroupForRD</b></span>
+                        <a href="#getByIdGroupForRD"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getByIdGroupForRD(idGroup: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, region: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/models/group/group.service.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idGroup</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>region</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/GetGroupDto.html" target="_self" >Promise&lt;GetGroupDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -532,12 +694,13 @@
 import { PrismaService } from &#x27;prisma/prisma.service&#x27;;
 import { CreateGroupDto } from &#x27;./dto/createGroup.dto&#x27;;
 import { EditGroupDto } from &#x27;./dto/editGroup.dto&#x27;;
+import { GetGroupDto } from &#x27;./dto/getGroup.dto&#x27;;
 
 @Injectable()
 export class GroupService {
     constructor(private prisma: PrismaService) { }
 
-    async getByIdForRD(idSchool: string, region: string) {
+    async getByIdForRD(idSchool: string, region: string): Promise&lt;GetGroupDto[]&gt; {
         return this.prisma.group.findMany({
             where: {
                 school: {
@@ -557,7 +720,33 @@ export class GroupService {
             }
         })
     }
-    async getByIdForMGTMT(idSchool: string) {
+    async getByIdGroupForRD(idGroup: string, region: string): Promise&lt;GetGroupDto&gt; {
+        return this.prisma.group.findUniqueOrThrow({
+            where: {
+               id:idGroup,
+               school:{
+                region:region
+               }
+            },
+            select: {
+                id: true,
+                codeGroup: true,
+                title: true,
+                subject: true,
+                dayOfTheWeek: true,
+                hour: true,
+                trial: true,
+                fiszki: {
+                    include:{
+                        user:true,
+                        phoneCalls:true
+                    }
+                },
+
+            }
+        })
+    }
+    async getByIdForMGTMT(idSchool: string): Promise&lt;GetGroupDto[]&gt; {
         return this.prisma.group.findMany({
             where: {
                 school: {
@@ -576,8 +765,24 @@ export class GroupService {
             }
         })
     }
-
-    async create(idSchool: string, region: string, body: CreateGroupDto) {
+    async getByIdGroupForMGTMT(idGroup: string): Promise&lt;GetGroupDto&gt; {
+        return this.prisma.group.findUniqueOrThrow({
+            where: {
+               id:idGroup
+            },
+            select: {
+                id: true,
+                codeGroup: true,
+                title: true,
+                subject: true,
+                dayOfTheWeek: true,
+                hour: true,
+                trial: true,
+                fiszki: true
+            }
+        })
+    }
+    async create(idSchool: string, region: string, body: CreateGroupDto): Promise&lt;CreateGroupDto&gt; {
         return this.prisma.group.create({
             data: {
                 codeGroup: body.codeGroup,
@@ -614,7 +819,6 @@ export class GroupService {
                         },
                         data: body
                     }
-
                 }
             }
         })

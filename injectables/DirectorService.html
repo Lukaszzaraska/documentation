@@ -118,12 +118,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(prisma: <a href="../injectables/PrismaService.html" target="_self">PrismaService</a>)</code>
+<code>constructor(prisma: PrismaService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/models/director/director.service.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/models/director/director.service.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -144,7 +144,7 @@
                                                         <td>prisma</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/PrismaService.html" target="_self" >PrismaService</a></code>
+                                                                    <code>PrismaService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -188,8 +188,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="53"
-                            class="link-to-prism">src/models/director/director.service.ts:53</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/models/director/director.service.ts:52</a></div>
                 </td>
             </tr>
 
@@ -251,7 +251,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/CreateDirectorDto.html" target="_self" >Promise&lt;CreateDirectorDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -283,8 +283,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="75"
-                            class="link-to-prism">src/models/director/director.service.ts:75</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/models/director/director.service.ts:73</a></div>
                 </td>
             </tr>
 
@@ -346,7 +346,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/EditDirectorDto.html" target="_self" >Promise&lt;EditDirectorDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -378,8 +378,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/models/director/director.service.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="11"
+                            class="link-to-prism">src/models/director/director.service.ts:11</a></div>
                 </td>
             </tr>
 
@@ -417,7 +417,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetDirectorDto.html" target="_self" >Promise&lt;GetDirectorDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -449,8 +449,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="27"
-                            class="link-to-prism">src/models/director/director.service.ts:27</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/models/director/director.service.ts:26</a></div>
                 </td>
             </tr>
 
@@ -500,7 +500,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetDirectorDto.html" target="_self" >Promise&lt;GetDirectorDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -520,12 +520,13 @@
 import { PrismaService } from &#x27;prisma/prisma.service&#x27;;
 import { CreateDirectorDto } from &#x27;./dto/createDirector.dto&#x27;;
 import { EditDirectorDto } from &#x27;./dto/editDirector.dto&#x27;;
+import { GetDirectorDto } from &#x27;./dto/getDirector.dto&#x27;;
 
 @Injectable()
 export class DirectorService {
     constructor(private prisma: PrismaService) { }
 
-    async getByIdForMgtmt(idSchool: string) {
+    async getByIdForMgtmt(idSchool: string): Promise&lt;GetDirectorDto&gt; {
         return this.prisma.director.findUniqueOrThrow({
             where: {
                 schoolId: idSchool
@@ -540,7 +541,7 @@ export class DirectorService {
         })
     }
 
-    async getByIdForRd(idSchool: string, region: string) {
+    async getByIdForRd(idSchool: string, region: string): Promise&lt;GetDirectorDto&gt; {
 
         const Find &#x3D; this.prisma.school.findUniqueOrThrow({
             where: {
@@ -566,7 +567,7 @@ export class DirectorService {
     }
 
 
-    async create(idSchool: string, region: string, body: CreateDirectorDto) {
+    async create(idSchool: string, region: string, body: CreateDirectorDto): Promise&lt;CreateDirectorDto&gt; {
 
         return this.prisma.director.create({
             data: {
@@ -583,12 +584,11 @@ export class DirectorService {
                     }
                 }
             }
-
         })
 
     }
 
-    async edit(idSchool: string, region: string, body: EditDirectorDto) {
+    async edit(idSchool: string, region: string, body: EditDirectorDto): Promise&lt;EditDirectorDto&gt; {
 
         const UpdateInSchool &#x3D; this.prisma.school.update({
             where: {
@@ -609,8 +609,6 @@ export class DirectorService {
             }
         })
         return UpdateInSchool.director()
-
-
     }
 }
 </code></pre>

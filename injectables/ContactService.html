@@ -118,12 +118,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(prisma: <a href="../injectables/PrismaService.html" target="_self">PrismaService</a>)</code>
+<code>constructor(prisma: PrismaService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/models/contact/contact.service.ts:7</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/models/contact/contact.service.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -144,7 +144,7 @@
                                                         <td>prisma</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/PrismaService.html" target="_self" >PrismaService</a></code>
+                                                                    <code>PrismaService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -188,8 +188,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/models/contact/contact.service.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/models/contact/contact.service.ts:40</a></div>
                 </td>
             </tr>
 
@@ -251,7 +251,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/CreateContactDto.html" target="_self" >Promise&lt;CreateContactDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -283,8 +283,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="56"
-                            class="link-to-prism">src/models/contact/contact.service.ts:56</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/models/contact/contact.service.ts:57</a></div>
                 </td>
             </tr>
 
@@ -358,7 +358,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/EditContactDto.html" target="_self" >Promise&lt;EditContactDto&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -390,8 +390,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="10"
-                            class="link-to-prism">src/models/contact/contact.service.ts:10</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="11"
+                            class="link-to-prism">src/models/contact/contact.service.ts:11</a></div>
                 </td>
             </tr>
 
@@ -429,7 +429,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetContactDto.html" target="_self" >Promise&lt;GetContactDto[]&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -461,8 +461,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/models/contact/contact.service.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/models/contact/contact.service.ts:23</a></div>
                 </td>
             </tr>
 
@@ -512,7 +512,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../classes/GetContactDto.html" target="_self" >Promise&lt;GetContactDto[]&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -532,12 +532,13 @@
 import { PrismaService } from &#x27;prisma/prisma.service&#x27;;
 import { CreateContactDto } from &#x27;./dto/createContact.dto&#x27;;
 import { EditContactDto } from &#x27;./dto/editContact.dto&#x27;;
+import { GetContactDto } from &#x27;./dto/getContact.dto&#x27;;
 
 @Injectable()
 export class ContactService {
     constructor(private prisma: PrismaService) { }
 
-    async getByIdForMgtmt(idSchool: string) {
+    async getByIdForMgtmt(idSchool: string): Promise&lt;GetContactDto[]&gt; {
         return this.prisma.contact.findMany({
             where: { schoolId: idSchool },
             select: {
@@ -549,7 +550,7 @@ export class ContactService {
 
     }
 
-    async getByIdForRd(idSchool: string, region: string) {
+    async getByIdForRd(idSchool: string, region: string): Promise&lt;GetContactDto[]&gt; {
         return this.prisma.contact.findMany({
             where: {
                 school: {
@@ -566,7 +567,7 @@ export class ContactService {
         })
 
     }
-    async create(idSchool: string, body: CreateContactDto, region: string) {
+    async create(idSchool: string, body: CreateContactDto, region: string): Promise&lt;CreateContactDto&gt; {
         return this.prisma.contact.create({
             data: {
                 dateOfVisit: body.dateOfVisit,
@@ -583,7 +584,7 @@ export class ContactService {
 
         })
     }
-    async edit(idSchool: string, body: EditContactDto, region: string, idContact: string) {
+    async edit(idSchool: string, body: EditContactDto, region: string, idContact: string): Promise&lt;EditContactDto&gt; {
         const UpdateInSchool &#x3D; this.prisma.school.update({
             where: {
                 unique_school_region_id:
@@ -600,7 +601,6 @@ export class ContactService {
                         },
                         data: body
                     }
-
                 }
             }
         })
