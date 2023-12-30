@@ -73,13 +73,16 @@
                             <a href="#HashPassword" title="src/common/helpers/hashPass.ts" ><b>HashPassword</b>&nbsp;&nbsp;&nbsp;(src/.../hashPass.ts)</a>
                         </li>
                         <li>
+                            <a href="#Match" title="src/Auth/decorators/match.decorator.ts" ><b>Match</b>&nbsp;&nbsp;&nbsp;(src/.../match.decorator.ts)</a>
+                        </li>
+                        <li>
                             <a href="#PredicteSheduleSchool" title="src/common/helpers/PredicteSheduleInSchool.ts" ><b>PredicteSheduleSchool</b>&nbsp;&nbsp;&nbsp;(src/.../PredicteSheduleInSchool.ts)</a>
                         </li>
                         <li>
                             <a href="#RoleValue" title="src/common/helpers/roleValue.ts" ><b>RoleValue</b>&nbsp;&nbsp;&nbsp;(src/.../roleValue.ts)</a>
                         </li>
                         <li>
-                            <a href="#seed" title="prisma/seed.ts" ><b>seed</b>&nbsp;&nbsp;&nbsp;(prisma/.../seed.ts)</a>
+                            <a href="#translateErrorMessages" title="src/common/helpers/translateError.ts" ><b>translateErrorMessages</b>&nbsp;&nbsp;&nbsp;(src/.../translateError.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -312,6 +315,76 @@
             </tr>
         </tbody>
     </table>
+</section>    <h3>src/Auth/decorators/match.decorator.ts</h3>
+    <section data-compodoc="block-methods">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Match"></a>
+                    <span class="name">
+                        <span ><b>Match</b></span>
+                        <a href="#Match"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>Match(property: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, validationOptions?: ValidationOptions)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>property</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>validationOptions</td>
+                                    <td>
+                                            <code>ValidationOptions</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>    <h3>src/common/helpers/PredicteSheduleInSchool.ts</h3>
     <section data-compodoc="block-methods">
     <h3></h3>    <table class="table table-sm table-bordered">
@@ -394,28 +467,58 @@
             </tr>
         </tbody>
     </table>
-</section>    <h3>prisma/seed.ts</h3>
+</section>    <h3>src/common/helpers/translateError.ts</h3>
     <section data-compodoc="block-methods">
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="seed"></a>
+                    <a name="translateErrorMessages"></a>
                     <span class="name">
-                        <span ><b>seed</b></span>
-                        <a href="#seed"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>translateErrorMessages</b></span>
+                        <a href="#translateErrorMessages"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>seed()</code>
+<code>translateErrorMessages(errorObject)</code>
                 </td>
             </tr>
 
 
 
 
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>errorObject</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
         </tbody>
     </table>
 </section>

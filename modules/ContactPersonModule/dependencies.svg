@@ -22,45 +22,29 @@
 <text text-anchor="start" x="429.73" y="-15.4" font-family="Times-12" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_ContactPersonModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="75,-70 75,-195 421,-195 421,-70 75,-70"/>
-</g>
-<g id="clust3" class="cluster">
-<title>cluster_ContactPersonModule_imports</title>
-<polygon fill="none" stroke="black" points="299,-78 299,-130 413,-130 413,-78 299,-78"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="136,-70 136,-195 360,-195 360,-70 136,-70"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_ContactPersonModule_providers</title>
-<polygon fill="none" stroke="black" points="83,-78 83,-130 291,-130 291,-78 83,-78"/>
+<polygon fill="none" stroke="black" points="144,-78 144,-130 352,-130 352,-78 144,-78"/>
 </g>
-<!-- PrismaModule -->
+<!-- ContactPersonService -->
 <g id="node1" class="node">
-<title>PrismaModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="405.43,-122 402.43,-126 381.43,-126 378.43,-122 306.57,-122 306.57,-86 405.43,-86 405.43,-122"/>
-<text text-anchor="middle" x="356" y="-99.8" font-family="Times,serif" font-size="14.00">PrismaModule</text>
+<title>ContactPersonService</title>
+<ellipse fill="#fdb462" stroke="black" cx="248" cy="-104" rx="96.12" ry="18"/>
+<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">ContactPersonService</text>
 </g>
 <!-- ContactPersonModule -->
 <g id="node2" class="node">
 <title>ContactPersonModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="334.7,-187 331.7,-191 310.7,-191 307.7,-187 193.3,-187 193.3,-151 334.7,-151 334.7,-187"/>
-<text text-anchor="middle" x="264" y="-164.8" font-family="Times,serif" font-size="14.00">ContactPersonModule</text>
-</g>
-<!-- PrismaModule&#45;&gt;ContactPersonModule -->
-<g id="edge1" class="edge">
-<title>PrismaModule&#45;&gt;ContactPersonModule</title>
-<path fill="none" stroke="black" d="M320.69,-122.11C320.69,-122.11 320.69,-140.99 320.69,-140.99"/>
-<polygon fill="black" stroke="black" points="317.19,-140.99 320.69,-150.99 324.19,-140.99 317.19,-140.99"/>
-</g>
-<!-- ContactPersonService -->
-<g id="node3" class="node">
-<title>ContactPersonService</title>
-<ellipse fill="#fdb462" stroke="black" cx="187" cy="-104" rx="96.12" ry="18"/>
-<text text-anchor="middle" x="187" y="-99.8" font-family="Times,serif" font-size="14.00">ContactPersonService</text>
+<polygon fill="#8dd3c7" stroke="black" points="318.7,-187 315.7,-191 294.7,-191 291.7,-187 177.3,-187 177.3,-151 318.7,-151 318.7,-187"/>
+<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00">ContactPersonModule</text>
 </g>
 <!-- ContactPersonService&#45;&gt;ContactPersonModule -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>ContactPersonService&#45;&gt;ContactPersonModule</title>
-<path fill="none" stroke="black" d="M238.36,-119.4C238.36,-119.4 238.36,-140.94 238.36,-140.94"/>
-<polygon fill="black" stroke="black" points="234.86,-140.94 238.36,-150.94 241.86,-140.94 234.86,-140.94"/>
+<path fill="none" stroke="black" d="M248,-122.11C248,-122.11 248,-140.99 248,-140.99"/>
+<polygon fill="black" stroke="black" points="244.5,-140.99 248,-150.99 251.5,-140.99 244.5,-140.99"/>
 </g>
 </g>
 </svg>

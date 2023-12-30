@@ -21,42 +21,30 @@
 <polygon fill="#fb8072" stroke="transparent" points="406,-10 406,-30 426,-30 426,-10 406,-10"/>
 <text text-anchor="start" x="429.73" y="-15.4" font-family="Times-12" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
-<title>cluster_InterviewsModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="84,-70 84,-195 412,-195 412,-70 84,-70"/>
+<title>cluster_LoggerModule</title>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="164,-70 164,-195 332,-195 332,-70 164,-70"/>
 </g>
 <g id="clust6" class="cluster">
-<title>cluster_InterviewsModule_providers</title>
-<polygon fill="none" stroke="black" points="92,-78 92,-130 404,-130 404,-78 92,-78"/>
+<title>cluster_LoggerModule_providers</title>
+<polygon fill="none" stroke="black" points="172,-78 172,-130 324,-130 324,-78 172,-78"/>
 </g>
-<!-- InterviewsService -->
+<!-- LoggerService -->
 <g id="node1" class="node">
-<title>InterviewsService</title>
-<ellipse fill="#fdb462" stroke="black" cx="315" cy="-104" rx="80.99" ry="18"/>
-<text text-anchor="middle" x="315" y="-99.8" font-family="Times,serif" font-size="14.00">InterviewsService</text>
+<title>LoggerService</title>
+<ellipse fill="#fdb462" stroke="black" cx="248" cy="-104" rx="67.76" ry="18"/>
+<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">LoggerService</text>
 </g>
-<!-- InterviewsModule -->
-<g id="node3" class="node">
-<title>InterviewsModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="295.13,-187 292.13,-191 271.13,-191 268.13,-187 176.87,-187 176.87,-151 295.13,-151 295.13,-187"/>
-<text text-anchor="middle" x="236" y="-164.8" font-family="Times,serif" font-size="14.00">InterviewsModule</text>
-</g>
-<!-- InterviewsService&#45;&gt;InterviewsModule -->
-<g id="edge1" class="edge">
-<title>InterviewsService&#45;&gt;InterviewsModule</title>
-<path fill="none" stroke="black" d="M264.79,-118.1C264.79,-118.1 264.79,-140.72 264.79,-140.72"/>
-<polygon fill="black" stroke="black" points="261.29,-140.72 264.79,-150.72 268.29,-140.72 261.29,-140.72"/>
-</g>
-<!-- UserService -->
+<!-- LoggerModule -->
 <g id="node2" class="node">
-<title>UserService</title>
-<ellipse fill="#fdb462" stroke="black" cx="158" cy="-104" rx="58.44" ry="18"/>
-<text text-anchor="middle" x="158" y="-99.8" font-family="Times,serif" font-size="14.00">UserService</text>
+<title>LoggerModule</title>
+<polygon fill="#8dd3c7" stroke="black" points="297.98,-187 294.98,-191 273.98,-191 270.98,-187 198.02,-187 198.02,-151 297.98,-151 297.98,-187"/>
+<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00">LoggerModule</text>
 </g>
-<!-- UserService&#45;&gt;InterviewsModule -->
-<g id="edge2" class="edge">
-<title>UserService&#45;&gt;InterviewsModule</title>
-<path fill="none" stroke="black" d="M196.45,-117.78C196.45,-117.78 196.45,-140.55 196.45,-140.55"/>
-<polygon fill="black" stroke="black" points="192.95,-140.55 196.45,-150.55 199.95,-140.55 192.95,-140.55"/>
+<!-- LoggerService&#45;&gt;LoggerModule -->
+<g id="edge1" class="edge">
+<title>LoggerService&#45;&gt;LoggerModule</title>
+<path fill="none" stroke="black" d="M248,-122.11C248,-122.11 248,-140.99 248,-140.99"/>
+<polygon fill="black" stroke="black" points="244.5,-140.99 248,-150.99 251.5,-140.99 244.5,-140.99"/>
 </g>
 </g>
 </svg>

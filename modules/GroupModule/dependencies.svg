@@ -24,13 +24,13 @@
 <title>cluster_GroupModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="167,-70 167,-203 329,-203 329,-70 167,-70"/>
 </g>
-<g id="clust6" class="cluster">
-<title>cluster_GroupModule_providers</title>
-<polygon fill="none" stroke="black" points="175,-78 175,-130 321,-130 321,-78 175,-78"/>
-</g>
 <g id="clust3" class="cluster">
 <title>cluster_GroupModule_imports</title>
 <polygon fill="none" stroke="black" points="191,-143 191,-195 321,-195 321,-143 191,-143"/>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_GroupModule_providers</title>
+<polygon fill="none" stroke="black" points="175,-78 175,-130 321,-130 321,-78 175,-78"/>
 </g>
 <!-- GroupModule -->
 <g id="node1" class="node">

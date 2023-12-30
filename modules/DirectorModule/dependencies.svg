@@ -22,45 +22,29 @@
 <text text-anchor="start" x="429.73" y="-15.4" font-family="Times-12" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_DirectorModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="99,-70 99,-195 397,-195 397,-70 99,-70"/>
-</g>
-<g id="clust3" class="cluster">
-<title>cluster_DirectorModule_imports</title>
-<polygon fill="none" stroke="black" points="275,-78 275,-130 389,-130 389,-78 275,-78"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="160,-70 160,-195 336,-195 336,-70 160,-70"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_DirectorModule_providers</title>
-<polygon fill="none" stroke="black" points="107,-78 107,-130 267,-130 267,-78 107,-78"/>
+<polygon fill="none" stroke="black" points="168,-78 168,-130 328,-130 328,-78 168,-78"/>
 </g>
-<!-- PrismaModule -->
+<!-- DirectorService -->
 <g id="node1" class="node">
-<title>PrismaModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="381.43,-122 378.43,-126 357.43,-126 354.43,-122 282.57,-122 282.57,-86 381.43,-86 381.43,-122"/>
-<text text-anchor="middle" x="332" y="-99.8" font-family="Times,serif" font-size="14.00">PrismaModule</text>
+<title>DirectorService</title>
+<ellipse fill="#fdb462" stroke="black" cx="248" cy="-104" rx="72.32" ry="18"/>
+<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">DirectorService</text>
 </g>
 <!-- DirectorModule -->
 <g id="node2" class="node">
 <title>DirectorModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="312.19,-187 309.19,-191 288.19,-191 285.19,-187 205.81,-187 205.81,-151 312.19,-151 312.19,-187"/>
-<text text-anchor="middle" x="259" y="-164.8" font-family="Times,serif" font-size="14.00">DirectorModule</text>
-</g>
-<!-- PrismaModule&#45;&gt;DirectorModule -->
-<g id="edge1" class="edge">
-<title>PrismaModule&#45;&gt;DirectorModule</title>
-<path fill="none" stroke="black" d="M297.44,-122.11C297.44,-122.11 297.44,-140.99 297.44,-140.99"/>
-<polygon fill="black" stroke="black" points="293.94,-140.99 297.44,-150.99 300.94,-140.99 293.94,-140.99"/>
-</g>
-<!-- DirectorService -->
-<g id="node3" class="node">
-<title>DirectorService</title>
-<ellipse fill="#fdb462" stroke="black" cx="187" cy="-104" rx="72.32" ry="18"/>
-<text text-anchor="middle" x="187" y="-99.8" font-family="Times,serif" font-size="14.00">DirectorService</text>
+<polygon fill="#8dd3c7" stroke="black" points="301.19,-187 298.19,-191 277.19,-191 274.19,-187 194.81,-187 194.81,-151 301.19,-151 301.19,-187"/>
+<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00">DirectorModule</text>
 </g>
 <!-- DirectorService&#45;&gt;DirectorModule -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>DirectorService&#45;&gt;DirectorModule</title>
-<path fill="none" stroke="black" d="M232.53,-118.1C232.53,-118.1 232.53,-140.72 232.53,-140.72"/>
-<polygon fill="black" stroke="black" points="229.03,-140.72 232.53,-150.72 236.03,-140.72 229.03,-140.72"/>
+<path fill="none" stroke="black" d="M248,-122.11C248,-122.11 248,-140.99 248,-140.99"/>
+<polygon fill="black" stroke="black" points="244.5,-140.99 248,-150.99 251.5,-140.99 244.5,-140.99"/>
 </g>
 </g>
 </svg>

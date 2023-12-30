@@ -76,10 +76,10 @@
                             <a href="#jwtSecretKey" title="src/Auth/auth.module.ts" ><b>jwtSecretKey</b>&nbsp;&nbsp;&nbsp;(src/.../auth.module.ts)</a>
                         </li>
                         <li>
-                            <a href="#prisma" title="prisma/seed.ts" ><b>prisma</b>&nbsp;&nbsp;&nbsp;(prisma/.../seed.ts)</a>
+                            <a href="#Public" title="src/Auth/decorators/public.decorator.ts" ><b>Public</b>&nbsp;&nbsp;&nbsp;(src/.../public.decorator.ts)</a>
                         </li>
                         <li>
-                            <a href="#Public" title="src/Auth/decorators/public.decorator.ts" ><b>Public</b>&nbsp;&nbsp;&nbsp;(src/.../public.decorator.ts)</a>
+                            <a href="#ReqInfo" title="src/Auth/decorators/reqinfo.decorator.ts" ><b>ReqInfo</b>&nbsp;&nbsp;&nbsp;(src/.../reqinfo.decorator.ts)</a>
                         </li>
                         <li>
                             <a href="#Roles" title="src/Auth/decorators/roles.decorator.ts" ><b>Roles</b>&nbsp;&nbsp;&nbsp;(src/.../roles.decorator.ts)</a>
@@ -244,22 +244,32 @@
         </tbody>
     </table>
 </section>
-    <h3>prisma/seed.ts</h3>
+    <h3>src/Auth/decorators/reqinfo.decorator.ts</h3>
     <section data-compodoc="block-properties">
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="prisma"></a>
+                    <a name="ReqInfo"></a>
                     <span class="name">
-                        <span ><b>prisma</b></span>
-                        <a href="#prisma"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>ReqInfo</b></span>
+                        <a href="#ReqInfo"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>new PrismaClient()</code>
+                        <i>Default value : </i><code>createParamDecorator&lt;unknown, ExecutionContext, ReqUserInfo&gt;(
+  (data: unknown, ctx: ExecutionContext): ReqUserInfo &#x3D;&gt; {
+    const request &#x3D; ctx.switchToHttp().getRequest();
+    return {
+      id: request.user.id,
+      role: request.user.role,
+      region: request.user.region,
+      email:request.user.email
+    };
+  },
+)</code>
                     </td>
                 </tr>
 
