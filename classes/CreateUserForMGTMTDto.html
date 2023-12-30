@@ -99,6 +99,7 @@
                             </li>
                             <li>
                                     <span class="modifier"></span>
+                                    <span class="modifier"></span>
                                 <a href="#job" >job</a>
                             </li>
                             <li>
@@ -224,6 +225,7 @@
                     <a name="job"></a>
                     <span class="name">
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                         <span ><b>job</b></span>
                         <a href="#job"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -240,7 +242,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @IsNotEmpty()<br />
+                            @IsNotEmpty()<br />@IsEnum(Job)<br />
                         </code>
                     </td>
                 </tr>
@@ -283,7 +285,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/models/user/dto/createUser.dto.ts:43</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/models/user/dto/createUser.dto.ts:42</a></div>
                         </td>
                     </tr>
 
@@ -393,7 +395,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/models/user/dto/createUser.dto.ts:71</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/models/user/dto/createUser.dto.ts:68</a></div>
                         </td>
                     </tr>
 
@@ -430,7 +432,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/models/user/dto/createUser.dto.ts:47</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/models/user/dto/createUser.dto.ts:46</a></div>
                         </td>
                     </tr>
 
@@ -450,7 +452,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Job, Role } from &quot;@prisma/client&quot;
-import { IsAlpha, IsEmail, IsEmpty, IsNotEmpty, IsOptional, IsPhoneNumber, Min, MinLength, NotContains } from &quot;class-validator&quot;
+import { IsAlpha, IsEmail, IsEmpty, IsEnum, IsNotEmpty, IsOptional, IsPhoneNumber, Min, MinLength, NotContains } from &quot;class-validator&quot;
 
 
 export class CreateUserForRdDto {
@@ -464,6 +466,7 @@ export class CreateUserForRdDto {
     surname: string
 
     @IsNotEmpty()
+    @IsEnum(Job)
     job: Job
 
     @IsNotEmpty()
@@ -474,8 +477,6 @@ export class CreateUserForRdDto {
     @IsNotEmpty()
     phone: string
 
-    // @IsNotEmpty()
-    // password: string
 
     @IsEmpty()
     region: string
@@ -498,6 +499,7 @@ export class CreateUserForMGTMTDto {
     surname: string
 
     @IsNotEmpty()
+    @IsEnum(Job)
     job: Job
 
     @IsNotEmpty()
@@ -513,9 +515,6 @@ export class CreateUserForMGTMTDto {
 
     @IsOptional()
     active: boolean
-
-    // @IsNotEmpty()
-    // password: string
 
     @IsNotEmpty()
     @NotContains(&quot;MGTMT&quot;)

@@ -137,8 +137,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="9"
-                            class="link-to-prism">src/common/validation/http-exception.filter.ts:9</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="8"
+                            class="link-to-prism">src/common/validation/http-exception.filter.ts:8</a></div>
                 </td>
             </tr>
 
@@ -209,46 +209,43 @@
 
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ExceptionFilter, Catch, ArgumentsHost, HttpException } from &#x27;@nestjs/common&#x27;;
-import { Prisma } from &#x27;@prisma/client&#x27;;
-import { ValidationError } from &#x27;class-validator&#x27;;
 import { Request, Response } from &#x27;express&#x27;;
+import { translateErrorMessages } from &#x27;../helpers/translateError&#x27;;
 
 
 @Catch(HttpException)
 export class HttpExceptionFilter implements ExceptionFilter {
   catch(exception: HttpException, host: ArgumentsHost) {
-    if (exception instanceof Prisma.PrismaClientKnownRequestError) {
-      console.log(exception)
-    }
+
     const ctx &#x3D; host.switchToHttp();
     const response &#x3D; ctx.getResponse&lt;Response&gt;();
     const request &#x3D; ctx.getRequest&lt;Request&gt;();
     const status &#x3D; exception.getStatus();
 
     const error: object | string &#x3D; exception.getResponse();
+    //console.log(error)
     if (error as object) {
-      const errorObj: any &#x3D; error as object
+      const errorObj: any &#x3D; error as object  
       response
         .status(status)
         .json({
-          error: errorObj.message,
-          msg: exception.message,
+          type: exception.message,
+          error: translateErrorMessages(errorObj),
           statusCode: status,
           headers: request.headers,
-          timestamp: {time:new Date().toLocaleTimeString(),date:new Date().toDateString()},
+          timestamp: { time: new Date().toLocaleTimeString(), date: new Date().toDateString() },
           path: request.url,
         });
-    }else{
-    response
-      .status(status)
-      .json({
-        type:&quot;HttpException&quot;,
-        error: error,
-        msg: exception.message,
-        statusCode: status,
-        timestamp: new Date().toISOString(),
-        path: request.url,
-      });
+    } else {
+      response
+        .status(status)
+        .json({
+          type: exception.message,
+          error: error,
+          statusCode: status,
+          timestamp: new Date().toISOString(),
+          path: request.url,
+        });
     }
   }
 }

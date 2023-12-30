@@ -94,6 +94,7 @@
                             </li>
                             <li>
                                     <span class="modifier"></span>
+                                    <span class="modifier"></span>
                                 <a href="#dayOfTheWeek" >dayOfTheWeek</a>
                             </li>
                             <li>
@@ -178,6 +179,7 @@
                     <a name="dayOfTheWeek"></a>
                     <span class="name">
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                         <span ><b>dayOfTheWeek</b></span>
                         <a href="#dayOfTheWeek"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -194,13 +196,13 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @IsOptional()<br />
+                            @IsOptional()<br />@IsEnum(DaysOfTheWeek)<br />
                         </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/models/group/dto/getGroup.dto.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/models/group/dto/getGroup.dto.ts:17</a></div>
                         </td>
                     </tr>
 
@@ -236,7 +238,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/models/group/dto/getGroup.dto.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/models/group/dto/getGroup.dto.ts:26</a></div>
                         </td>
                     </tr>
 
@@ -272,7 +274,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/models/group/dto/getGroup.dto.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/models/group/dto/getGroup.dto.ts:20</a></div>
                         </td>
                     </tr>
 
@@ -380,7 +382,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/models/group/dto/getGroup.dto.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/models/group/dto/getGroup.dto.ts:23</a></div>
                         </td>
                     </tr>
 
@@ -399,8 +401,8 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { DaysOfTheWeek, Fiszka } from &quot;@prisma/client&quot;
-import { IsNotEmpty, IsOptional} from &quot;class-validator&quot;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { DaysOfTheWeek, Fiszka, PhoneCalls } from &quot;@prisma/client&quot;
+import { IsEnum, IsNotEmpty, IsOptional} from &quot;class-validator&quot;
 
 export class GetGroupDto {
 
@@ -414,6 +416,7 @@ export class GetGroupDto {
     subject:string
 
     @IsOptional()
+    @IsEnum(DaysOfTheWeek)
     dayOfTheWeek:DaysOfTheWeek
 
     @IsOptional()
@@ -424,6 +427,7 @@ export class GetGroupDto {
 
     @IsOptional()
     fiszki:Fiszka[]
+
 }</code></pre>
     </div>
 </div>

@@ -103,6 +103,7 @@
                             <li>
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
+                                    <span class="modifier"></span>
                                 <a href="#comments" >comments</a>
                             </li>
                             <li>
@@ -174,7 +175,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @IsNumber()<br />@Min(0)<br />@Max(7)<br />@IsOptional()<br />
+                            @IsNumber()<br />@Min(0)<br />@Max(8)<br />@IsOptional()<br />
                         </code>
                     </td>
                 </tr>
@@ -232,6 +233,7 @@
                     <span class="name">
                             <span class="modifier"></span>
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                         <span ><b>comments</b></span>
                         <a href="#comments"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -248,13 +250,13 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @IsAscii()<br />@IsOptional()<br />
+                            @ValidateIf((obj, value) &#x3D;&gt; )<br />@IsAscii()<br />@IsOptional()<br />
                         </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/models/fiszka/dto/EditFiszka.dto.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/models/fiszka/dto/EditFiszka.dto.ts:26</a></div>
                         </td>
                     </tr>
 
@@ -291,7 +293,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/models/fiszka/dto/EditFiszka.dto.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/models/fiszka/dto/EditFiszka.dto.ts:34</a></div>
                         </td>
                     </tr>
 
@@ -365,7 +367,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/models/fiszka/dto/EditFiszka.dto.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/models/fiszka/dto/EditFiszka.dto.ts:30</a></div>
                         </td>
                     </tr>
 
@@ -401,7 +403,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/models/fiszka/dto/EditFiszka.dto.ts:36</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/models/fiszka/dto/EditFiszka.dto.ts:37</a></div>
                         </td>
                     </tr>
 
@@ -457,7 +459,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { IsAlpha, IsAlphanumeric, IsAscii, IsEmail, IsNumber, IsOptional, IsPhoneNumber, Max, Min } from &quot;class-validator&quot;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { IsAlpha, IsAscii, IsEmail, IsNumber, IsOptional, IsPhoneNumber, Max, Min, ValidateIf } from &quot;class-validator&quot;
 
 export class EditFiszkaDto {
     @IsAlpha(&quot;pl-PL&quot;)
@@ -471,13 +473,14 @@ export class EditFiszkaDto {
     @IsAlpha(&quot;pl-PL&quot;)
     @IsOptional()
     classLetter: string
-    
+
     @IsNumber()
     @Min(0)
-    @Max(7)
+    @Max(8)
     @IsOptional()
     classDigit: number
 
+    @ValidateIf((obj, value) &#x3D;&gt; value !&#x3D;&#x3D; &quot;&quot; )
     @IsAscii()
     @IsOptional()
     comments: string
@@ -493,7 +496,7 @@ export class EditFiszkaDto {
     @IsOptional()
     resignation: boolean
 
-  
+
 }</code></pre>
     </div>
 </div>

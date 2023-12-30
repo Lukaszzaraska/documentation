@@ -103,6 +103,7 @@
                             <li>
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
+                                    <span class="modifier"></span>
                                 <a href="#comments" >comments</a>
                             </li>
                             <li>
@@ -228,6 +229,7 @@
                     <span class="name">
                             <span class="modifier"></span>
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                         <span ><b>comments</b></span>
                         <a href="#comments"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -244,13 +246,13 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @IsAscii()<br />@IsOptional()<br />
+                            @ValidateIf((obj, value) &#x3D;&gt; )<br />@IsAscii()<br />@IsOptional()<br />
                         </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/models/fiszka/dto/CreateFiszka.dto.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/models/fiszka/dto/CreateFiszka.dto.ts:26</a></div>
                         </td>
                     </tr>
 
@@ -281,13 +283,13 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @IsEmail()<br />@IsNotEmpty()<br />
+                            @IsEmail()<br />@IsOptional()<br />
                         </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/models/fiszka/dto/CreateFiszka.dto.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/models/fiszka/dto/CreateFiszka.dto.ts:34</a></div>
                         </td>
                     </tr>
 
@@ -355,13 +357,13 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @IsPhoneNumber(&#x27;PL&#x27;)<br />@IsOptional()<br />
+                            @IsPhoneNumber(&#x27;PL&#x27;)<br />@IsNotEmpty()<br />
                         </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/models/fiszka/dto/CreateFiszka.dto.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/models/fiszka/dto/CreateFiszka.dto.ts:30</a></div>
                         </td>
                     </tr>
 
@@ -417,7 +419,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { IsAlpha, IsAlphanumeric, IsAscii, IsEmail, IsNotEmpty, IsNumber, IsOptional, IsPhoneNumber, Max, Min, isNumber } from &quot;class-validator&quot;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { IsAlpha, IsAscii, IsEmail, IsNotEmpty, IsNumber, IsOptional, IsPhoneNumber, Max, Min, ValidateIf } from &quot;class-validator&quot;
 
 export class CreateFiszkaDto {
     @IsAlpha(&quot;pl-PL&quot;)
@@ -438,19 +440,21 @@ export class CreateFiszkaDto {
     @IsOptional()
     classDigit:number
 
+    @ValidateIf((obj, value) &#x3D;&gt; value !&#x3D;&#x3D; &quot;&quot; )
     @IsAscii()
     @IsOptional()
     comments:string
 
     @IsPhoneNumber(&#x27;PL&#x27;)
-    @IsOptional()
+    @IsNotEmpty()
     phone:string
 
     @IsEmail()
-    @IsNotEmpty()
+    @IsOptional()
     email:string
 
-}</code></pre>
+}
+</code></pre>
     </div>
 </div>
 

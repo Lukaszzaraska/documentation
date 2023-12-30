@@ -227,8 +227,9 @@ export class PrismaOtherFilter implements ExceptionFilter {
 
 
         response
+        .status(400)
             .json({
-                type: &quot;PrismaError&quot;,
+                type: &quot;PrismaOtherError&quot;,
                 error: exception.message,
                 code: exception.clientVersion,
                 timestamp: new Date().toISOString(),

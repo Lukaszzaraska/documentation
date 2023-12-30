@@ -44,7 +44,7 @@
 
 <ol class="breadcrumb">
   <li class="breadcrumb-item">Classes</li>
-  <li class="breadcrumb-item" >NotFoundErrorFilter</li>
+  <li class="breadcrumb-item" >MatchConstraint</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -68,7 +68,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/common/validation/NotFoundErrorFilter.filter.ts</code>
+            <code>src/Auth/decorators/match.decorator.ts</code>
         </p>
 
 
@@ -78,7 +78,7 @@
                 <h3>Implements</h3>
             </p>
             <p class="comment">
-                        <code>ExceptionFilter</code>
+                        <code>ValidatorConstraintInterface</code>
             </p>
 
 
@@ -96,7 +96,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#catch" >catch</a>
+                                <a href="#defaultMessage" >defaultMessage</a>
+                            </li>
+                            <li>
+                                <a href="#validate" >validate</a>
                             </li>
                         </ul>
                     </td>
@@ -121,24 +124,24 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="catch"></a>
+                    <a name="defaultMessage"></a>
                     <span class="name">
-                        <span ><b>catch</b></span>
-                        <a href="#catch"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>defaultMessage</b></span>
+                        <a href="#defaultMessage"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>catch(exception: NotFoundError, host: ArgumentsHost)</code>
+<code>defaultMessage(args: ValidationArguments)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="7"
-                            class="link-to-prism">src/common/validation/NotFoundErrorFilter.filter.ts:7</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/Auth/decorators/match.decorator.ts:24</a></div>
                 </td>
             </tr>
 
@@ -159,21 +162,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>exception</td>
+                                    <td>args</td>
                                     <td>
-                                            <code>NotFoundError</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>host</td>
-                                    <td>
-                                            <code>ArgumentsHost</code>
+                                            <code>ValidationArguments</code>
                                     </td>
 
                                     <td>
@@ -188,7 +179,88 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validate"></a>
+                    <span class="name">
+                        <span ><b>validate</b></span>
+                        <a href="#validate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validate(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, args: ValidationArguments)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/Auth/decorators/match.decorator.ts:19</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>args</td>
+                                    <td>
+                                            <code>ValidationArguments</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                     </div>
                     <div class="io-description">
@@ -208,31 +280,34 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ExceptionFilter, Catch, ArgumentsHost} from &#x27;@nestjs/common&#x27;;
-import { Request, Response } from &#x27;express&#x27;;
-import { NotFoundError } from &quot;rxjs&quot;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {registerDecorator, ValidationArguments, ValidationOptions, ValidatorConstraint, ValidatorConstraintInterface} from &#x27;class-validator&#x27;;
 
-@Catch(NotFoundError)
-export class NotFoundErrorFilter implements ExceptionFilter {
-  catch(exception: NotFoundError, host: ArgumentsHost) {
-    const ctx &#x3D; host.switchToHttp();
-    const response &#x3D; ctx.getResponse&lt;Response&gt;();
-    const request &#x3D; ctx.getRequest&lt;Request&gt;();
 
-    const err &#x3D; exception.message;
 
-    response
-     .status(404)
-      .json({
-        type:&quot;NotFoundError&quot;,
-        statusCode:request.statusCode ,
-        error:err,
-        timestamp: new Date().toISOString(),
-        path: request.url,
-      });
-  }
+export function Match(property: string, validationOptions?: ValidationOptions) {
+    return (object: any, propertyName: string) &#x3D;&gt; {
+        registerDecorator({
+            target: object.constructor,
+            propertyName: propertyName,
+            constraints: [property],
+            options: validationOptions,
+            validator: MatchConstraint,
+        });
+    };
 }
-</code></pre>
+@ValidatorConstraint({name: &#x27;Match&#x27;})
+export class MatchConstraint implements ValidatorConstraintInterface {
+
+    validate(value: any, args: ValidationArguments) {
+        const [relatedPropertyName] &#x3D; args.constraints;
+        const relatedValue &#x3D; (args.object as any)[relatedPropertyName];
+        return value &#x3D;&#x3D;&#x3D; relatedValue;
+    }
+    defaultMessage(args: ValidationArguments) {
+        const [relatedPropertyName] &#x3D; args.constraints;
+        return &#x60;Pole ${args.property} musi pasować do pola ${relatedPropertyName}&#x60;;
+      }
+}</code></pre>
     </div>
 </div>
 
@@ -270,7 +345,7 @@ export class NotFoundErrorFilter implements ExceptionFilter {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'NotFoundErrorFilter.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'MatchConstraint.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
