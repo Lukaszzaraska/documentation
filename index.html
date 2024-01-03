@@ -30,64 +30,65 @@
             <div class="hidden-xs menu">
                 <compodoc-menu mode="normal"></compodoc-menu>
             </div>
-            <!-- START CONTENT -->
+
             <div class="content getting-started">
                 <div class="content-data">
 
-                    <h2>Dokumentacja techniczna aplikacji "Edwings company management" </h2>
+                    <h2>Dokumentacja techniczna aplikacji "Edwings Company Management"</h2>
                     <div>
-                        <h3>Podstawowe komendy</h3>
-                        <p>Migracja bazy danych- npx prisma migrate dev --name AddLogger</p>
-                        <p>Uruchamia projekt - npm run start:dev</p>
-                        <p>Włącza interfejs graficzny do zarządzania bazą danych - npx prisma studio -p postgresql://{Connectionstring}/postgres</p>
-                        <p>Tworzenie dokumnetacji - compodoc -p tsconfig.doc.json </p>
-                        <p>Uruchomienie testów - npm test</p>
-                        <p>Dokumentacja Api dostępna pod adresem http://localhost:3000/api po uruchomieniu aplikacji lokalnie</p>
-                        <p>npm i prisma-dbml-generator</p>
-                        <p>Inicjalizuje wartości w bazie danych - npx prisma db seed</p>
-                    </div>
-                    <div>
-                        <p>Aplikacja została podzielona na dwa główne foldery, poniżej zostały opisane najważniejsze pliki i ich założenia.</p>
+                        <h3>Podstawowe Komendy</h3>
                         <ul>
-                           <li>prisma</li>
-                             <ol>
-                                <li>dbml - schemat bazy danych w formacie .dbml</li>
-                                <li>migrations - zawiera wszystkie migracje bazy danych</li>
-                                <li>schema.prisma - zawiera główny schemat na podstawie którego jest generowana baza danych</li>
-                                <li>seed.ts - Stosowany do testowania, pozwala zainicjalizować dane testowe w bazie danych</li>
-                             </ol> 
-                           <li>src</li> 
-                           <ol>
-                            <li>Auth</li>
-                            <ol>
-                                <li>decorators - zawiera custom dekoratory, takie jak role, porównywanie wartości w dto, pobieranie danych o użytkowniku z requesta</li>
-                            </ol>
-                            <li>common</li>
-                            <ol>
-                                <li>helpers - zawiera uniwersalne funkcje. Np. hashowanie haseł, porównywanie klas</li>
-                                <li>validation - zawiera wszystkie filtry służące do obsługi wyjątków</li>
-                            </ol>
-                            <li>models - zawiera wszystkie modele używane w aplikacji. Każdy model posiada ten sam schemat</li>
-                            <ol>
-                                <li>dto - folder zawierajacy wszystkie pliki dto używane w danym modelu</li>
-                                <li>.controller.ts - odpowiedzialne są za obsługę przychodzących żądań HTTP i zwracanie odpowiedzi do klienta. </li>
-                                <li>.module.ts - są kontenerami, które grupują powiązane elementy takie jak kontrolery, serwisy, a także inne moduły</li>
-                                <li>.service.ts - są używane do implementacji logiki biznesowej. To tutaj odbywa się przetwarzanie danych, interakcje z bazami danych i wykonywanie operacji biznesowych.</li>
-                            </ol>
-                         </ol> 
+                            <li><strong>Migracja bazy danych:</strong> <code>npx prisma migrate dev --name AddLogger</code></li>
+                            <li><strong>Uruchamianie projektu:</strong> <code>npm run start:dev</code></li>
+                            <li><strong>Interfejs graficzny do zarządzania bazą danych:</strong> <code>npx prisma studio -p postgresql://{ConnectionString}/postgres</code></li>
+                            <li><strong>Tworzenie dokumentacji:</strong> <code>npm compodoc</code></li>
+                            <li><strong>Uruchomienie testów:</strong> <code>npm test</code></li>
+                            <li><strong>Dokumentacja API:</strong> Dostępna pod adresem <a href="http://localhost:3000/api">http://localhost:3000/api</a> po uruchomieniu aplikacji lokalnie</li>
+                            <li><strong>Instalacja prisma-dbml-generator:</strong> <code>npm i prisma-dbml-generator</code> - Przekształca schemat Prismy na schemat .dbml</li>
+                            <li><strong>Inicjalizacja wartości w bazie danych:</strong> <code>npx prisma db seed</code></li>
                         </ul>
-                
                     </div>
-
-
-                    <p>Author - Łukasz zaraska</p>
-
-
-
-
-
-
-
+                    
+                    <div>
+                        <h3>Struktura aplikacji</h3>
+                        <p>Aplikacja została podzielona na dwa główne foldery:</p>
+                        <ul>
+                            <li><strong>Prisma:</strong>
+                                <ul>
+                                    <li><em>dbml</em> - Schemat bazy danych w formacie .dbml</li>
+                                    <li><em>migrations</em> - Zawiera wszystkie migracje bazy danych</li>
+                                    <li><em>schema.prisma</em> - Główny schemat bazy danych</li>
+                                    <li><em>seed.ts</em> - Skrypt do inicjalizacji danych testowych w bazie danych</li>
+                                </ul>
+                            </li>
+                            <li><strong>Src:</strong>
+                                <ul>
+                                    <li><strong>Auth:</strong>
+                                        <ul>
+                                            <li><em>decorators</em> - Custom dekoratory, np. role, porównywanie wartości w DTO, pobieranie danych użytkownika z requesta</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Common:</strong>
+                                        <ul>
+                                            <li><em>helpers</em> - Uniwersalne funkcje, np. hashowanie haseł, porównywanie klas</li>
+                                            <li><em>validation</em> - Filtry do obsługi wyjątków</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Models:</strong>
+                                        <ul>
+                                            <li><em>dto</em> - Folder zawierający DTO dla danego modelu</li>
+                                            <li><em>.controller.ts</em> - Obsługa żądań HTTP i zwracanie odpowiedzi klientowi</li>
+                                            <li><em>.module.ts</em> - Grupowanie powiązanych elementów takich jak kontrolery, serwisy i inne moduły</li>
+                                            <li><em>.service.ts</em> - Implementacja logiki biznesowej, przetwarzanie danych, interakcje z bazami danych</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>Autor:</strong> Łukasz Zaraska</p>
+                    
                 </div>
                 <div class="search-results">
                     <div class="has-results">
