@@ -38,7 +38,7 @@
                     <div>
                         <h3>Podstawowe Komendy</h3>
                         <ul>
-                            <li><strong>Migracja bazy danych:</strong> <code>npx prisma migrate dev --name AddLogger</code></li>
+                            <li><strong>Migracja bazy danych:</strong> <code>npx prisma migrate dev --name AddLogger</code> <i>automatycznie uruchamia plik seed.ts</i></li>
                             <li><strong>Uruchamianie projektu:</strong> <code>npm run start:dev</code></li>
                             <li><strong>Interfejs graficzny do zarządzania bazą danych:</strong> <code>npx prisma studio -p postgresql://{ConnectionString}/postgres</code></li>
                             <li><strong>Tworzenie dokumentacji:</strong> <code>npm compodoc</code></li>
@@ -65,7 +65,8 @@
                                 <ul>
                                     <li><strong>Auth:</strong>
                                         <ul>
-                                            <li><em>decorators</em> - Custom dekoratory, np. role, porównywanie wartości w DTO, pobieranie danych użytkownika z requesta</li>
+                                            <li><em>decorators</em> - Zawiera custom dekoratory, np. role, porównywanie wartości w DTO, pobieranie danych użytkownika z requesta</li>
+                                            <li><em>.guard.ts</em>używany do zarządzania dostępem do różnych części aplikacji. Jego głównym zadaniem jest decydowanie, czy dany żądanie HTTP powinno być przetworzone przez aplikację, czy nie</li>
                                         </ul>
                                     </li>
                                     <li><strong>Common:</strong>
@@ -77,9 +78,11 @@
                                     <li><strong>Models:</strong>
                                         <ul>
                                             <li><em>dto</em> - Folder zawierający DTO dla danego modelu</li>
+                                            <li><em>.pipes.ts</em> - To specjalny rodzaj oprogramowania pośredniczącego (middleware) jest używane do przetwarzania i walidacji danych wejściowych do aplikacji</li>
                                             <li><em>.controller.ts</em> - Obsługa żądań HTTP i zwracanie odpowiedzi klientowi</li>
                                             <li><em>.module.ts</em> - Grupowanie powiązanych elementów takich jak kontrolery, serwisy i inne moduły</li>
                                             <li><em>.service.ts</em> - Implementacja logiki biznesowej, przetwarzanie danych, interakcje z bazami danych</li>
+                                            <li><em>.service.spec.ts</em> - Pliki testowe danego modelu</li>
                                         </ul>
                                     </li>
                                 </ul>
